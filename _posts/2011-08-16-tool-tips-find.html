@@ -1,0 +1,133 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Tool tips: Find'
+author:
+  display_name: eliot
+  login: eliot
+  email: fadookie@gmail.com
+  url: ''
+author_login: eliot
+author_email: fadookie@gmail.com
+wordpress_id: 320
+wordpress_url: http://www.eliotlash.com/?p=320
+date: '2011-08-16 11:29:21 +0000'
+date_gmt: '2011-08-16 18:29:21 +0000'
+categories:
+- Scripting
+- Tools
+tags:
+- automation
+- unix
+- commandline
+- scripting
+- tool tips
+- bash
+comments: []
+---
+<p><img class="alignright" style="margin: 0px;" title="Find is like a robot that you can program to find stuff and then do something to it :)" src="http://eliot.s3.amazonaws.com/eliotlash.com/robot_search_facingleft.png" alt="A robot searching" width="164" height="166" />The <strong>find</strong> utility is so useful for automation that it deserves a special mention on its own. I will not attempt to cover all of its features, only the ones that I use on a daily basis.</p>
+<p>I typically use <strong>find</strong> for two purposes:</p>
+<ol>
+<li>To create a list of files matching some search terms.</li>
+<li>To execute a batch operation on those files using the -exec argument.</li>
+</ol>
+<p>In <a href="http://www.eliotlash.com/2011/02/better-living-through-automation-pt-3-shell-scripting-becoming-a-wizard/">Shell Scripting: Becoming a Wizard</a>, I layed out a recipe&nbsp;for productive and useful bash scripts that uses a while loop over some sort of multi-line input. This construct is more powerful than <strong>find</strong>'s built in <strong>-exec</strong> flag, but that power is not always needed.</p>
+<p>Here is how I use <strong>find</strong>:</p>
+<p><!--more--></p>
+<h1>Stage 1:&nbsp;Build up a list of files to operate on.</h1>
+<p>By default, <strong>find</strong> just prints the list of matching files, which is really useful because you can check the list of files you'll be working with before you move on to actually doing something to them. It also makes <strong>find</strong> useful as a general purpose file searching tool that's available on most Unix systems. Note that find does not inspect the <em>contents</em> of a file directly, only its external attributes. If you want to search through file contents from the command line, check out grep/fgrep or <a href="http://betterthangrep.com/">ack</a>. (fgrep -r searchterm file1 [file2 ...])</p>
+<p>The general form for <strong>find</strong> looks something like this:</p>
+<p><code>find directory argument1 [argument2 ...]</code></p>
+<p>Typically, I want to run a recursive search from my current directory (which is '.' in bash convention.) I'll include a bash prompt signified by the $ character, and example output from the <strong>find</strong> command to better illustrate what's going on:</p>
+<p><code>$ find .<br />
+.<br />
+./bar.jpg<br />
+./baz.png<br />
+./foo<br />
+./foo/foo2.jpg<br />
+./foo.jpg</code></p>
+<p>This command (<strong>find .</strong>) is the simplest working invocation of <strong>find</strong>, and produces a full listing of every file and directory inside your current directory (including the current directory itself.) I rarely ever want this though, so I will begin by limiting my search. A common way I do this is by searching for filename matches. For instance:</p>
+<p><code>$ find . -name '*.jpg'<br />
+./foo/foo2.jpg<br />
+./foo.jpg</code></p>
+<p>Uses wildcard/glob syntax to search for only for files with names ending in .jpg. If we wanted to also include files ending in .JPG or any other case combinations, we could use the -iname (case insensitive name) expression instead.</p>
+<p><code>$ find . -iname '*.jpg'<br />
+./bar.JPG<br />
+./foo/foo2.jpg<br />
+./foo.jpg</code></p>
+<p>This is working well so far. Supposing we wanted to limit our recursive search to directories of only a certain depth, we can do that using the <strong>-maxdepth</strong> flag. To search only the immediate children of the current directory, we use <strong>-maxdepth 1</strong>. To search only immediate children, and the children of immediate subdirectories, use <strong>-maxdepth 2</strong>, and so on:</p>
+<p><code>$ find . -iname '*.jpg' -maxdepth 1<br />
+./bar.JPG<br />
+./foo.jpg<br />
+</code></p>
+<p>Let's say for the sake of example that we wanted to search based off of partial filename instead, for files called 'foo':</p>
+<p><code>$ find . -name '*foo*'<br />
+./foo<br />
+./foo/foo2.jpg<br />
+./foo.jpg</code></p>
+<p>Whoops! We don't want any directories in this case, so let's narrow our search criteria to files only and not directories:</p>
+<p><code>$ find . -name '*foo*' -type f<br />
+./foo/foo2.jpg<br />
+./foo.jpg</code></p>
+<p>Perfect! <strong>-type f</strong> selects files and <strong>-type d</strong> selects directories, respectively. In this example we could also use glob searching on the name for files such as <strong>-name '*foo*.jpg'</strong>. However, <strong>-type</strong> is still useful since Unix systems allow file 'extensions' on directory names and allow files without extensions.</p>
+<p>How about if we only want to find files in a certain subfolder? We can use <strong>-path</strong> :</p>
+<p><code>$ find . -path '*foo/*.jpg'<br />
+./foo/foo2.jpg<br />
+</code></p>
+<p>A trivial example, but this is really useful for searching large source code trees for a particular file, etc. For instance, if I know there's a class that has Twitter in its filename and resides in some subfolder of Services, a search for <strong>-path '*Services*Twitter*'</strong> should turn it up. A case insensitive version of this flag is <strong>-iwholename</strong>.</p>
+<p>What if we want to use some logic in our search? <strong>find</strong> supports that. For instance, we can search for all jpg files that do NOT contain 'foo' in their name using the <strong>!</strong> operator:</p>
+<p><code>$ find . -iname '*.jpg' ! -name '*foo*'<br />
+./bar.JPG<br />
+</code></p>
+<p>How about if we want to find all jpg and png files? Use -o for logical or. It will be true if either the previous flag or the next flag is true (but not if both are):</p>
+<p><code>$ find . -iname '*.jpg' -o -iname '*.png'<br />
+./bar.JPG<br />
+./baz.png<br />
+./foo/foo2.jpg<br />
+./foo.jpg</code></p>
+<p>Tons of other functionality exists in <strong>find</strong>, although the above are all the commands I use on a daily basis. <strong>find</strong> can filter on modification/creation time, ownership, more unusual file types like FIFOs, and use other types of logic such as AND. Run <strong>man find</strong> for the full list.</p>
+<h1>Stage 2: Execute a command across all selected files.</h1>
+<p>Now that we have a list of files we want to use, we can take advantage of <strong>find</strong>'s most useful and powerful flag, <strong>-exec</strong>. The syntax for <strong>-exec</strong> seems cryptic at first, but comes to make sense with repeated use.</p>
+<p>There are two forms I typically use when calling -exec:</p>
+<p><code>-exec somecommand {} \;</code></p>
+<p>and</p>
+<p><code>-exec somecommand {} +</code></p>
+<p>The former will execute some command once for each file in our search results. The latter will execute one command once (or as seldom as possible) and pass the files in as multiple arguments. For example:</p>
+<p><code>$ find . -iname '*.jpg' -maxdepth 1 -exec echo file {} \;<br />
+file ./bar.JPG<br />
+file ./foo.jpg</code></p>
+<p>The command <strong>echo file {} </strong>is being run for each result, with the path to the result being substituted where the <strong>{}</strong> is. <strong>\;</strong> is just a terminator character to let <strong>find</strong> know that that's the end of the command we want to run. If we get rid of the echo (a debugging trick I use to preview a list of batch commands) the <a href="http://www.eliotlash.com/2011/02/tool-tips-file/"><strong>file</strong> command</a> will actually be run against all these files, printing out their true type for us:</p>
+<p><code>$ find . -iname '*.jpg' -maxdepth 1 -exec file {} \;<br />
+./bar.JPG: PNG image, 64 x 32, 8-bit/color RGBA, non-interlaced<br />
+./foo.jpg: JPEG image data, EXIF standard</code></p>
+<p>Good thing I checked - looks like bar.JPG is really a PNG with an incorrect extension!</p>
+<p>The file utility is even kind enough to print out the file name of the file it's talking about. It's also spiffy enough to accept a space delimited list of files to parse (as do many command line utilities) so we can improve the performance of this batch operation by reducing the invocations of <strong>file</strong>:</p>
+<p><code>$ find . -iname '*.jpg' -maxdepth 1 -exec echo file {} +<br />
+file ./bar.JPG ./foo.jpg</code></p>
+<p>Rather than file getting called twice (once for each result) it's only called once, with each result being passed as an argument. In this trivial example this behaves the same. But if you need to run a batch operation over many files, it can make a difference in speed.</p>
+<p>Also, if your batch operation involves something like gluing a bunch of files together (like with <strong>cat</strong> to concatenate files) or opening them all at once in one editor, the <strong>+</strong> style invocation is&nbsp;necessary. It basically serves the same function as <strong>xargs</strong>, so there's no reason to pipe the output of <strong>find</strong> to <strong>xargs</strong>.&nbsp;Using <strong>-exec {} +</strong> is safer and faster. <strong>xargs</strong> is still useful when taking input from another source such as a text file, but be aware of paths with spaces in them, they need to be escaped properly.</p>
+<h1>Gotchas</h1>
+<p>If you are combining&nbsp;<strong>-exec</strong> with logical operations such as <strong>-o</strong>, you may see some odd results. Find is capable of running different&nbsp;<strong>-exec</strong> commands for different groups of matched files, and this is the default behavior. So for instance:</p>
+<p><code>$ find . -iname '*.jpg' -o -iname '*.png' -exec echo {} \;<br />
+./baz.png</code></p>
+<p>The jpg files don't show up, since the -exec is only running on files that match the second search term (png.) The way to fix this is by grouping logical searches using parentheses. These have to be escaped, otherwise bash will try to interpret them. So now:</p>
+<p><code>$ find . \( -iname '*.jpg' -o -iname '*.png' \) -exec echo {} \;<br />
+./bar.JPG<br />
+./baz.png<br />
+./foo/foo2.jpg<br />
+./foo.jpg</code></p>
+<p>Much better!</p>
+<h1>Limitations</h1>
+<p><strong>find</strong>'s <strong>-exec</strong> flag is only designed to run one command at a time, and doesn't support fancy bash tricks such as output substitution and piping. If you need those, use the bash while loop outlined in <a href="http://www.eliotlash.com/2011/02/better-living-through-automation-pt-3-shell-scripting-becoming-a-wizard/">Shell Scripting: Becoming a Wizard</a>. You can still use <strong>find</strong> to create the list of files you want to operate on, just pipe the output of find into the bash while loop.</p>
+<p>Note that the <strong>-exec {}&nbsp;+</strong> style invocation may not be present in older versions of&nbsp;<strong>find</strong>. If that's the case and you have no choice but to use&nbsp;<strong>xargs</strong>, avoid nasty escaping issues by telling both tools to use the null character as a filename delimiter instead of newlines using&nbsp;<strong>find -print0</strong> and&nbsp;<strong>xargs -0</strong>, like so:</p>
+<p><code>find directory -print0 [argument2 ...] | xargs -0 somecommand</code></p>
+<h1>Conclusion</h1>
+<p>I hope you learned a thing or two about <strong>find</strong> today. Remember, practice! I always had to look up the <strong>-exec</strong> syntax the first several times I used it, or if I haven't used it in a while (which is no longer likely since I now use it almost every day!)</p>
+<p>After reading this article and experimenting a bit, you should now be able to <a href="http://www.eliotlash.com/2011/02/better-living-through-automation-pt-2-the-shell-and-coreutils/#find_examples">understand the <strong>find</strong> examples for doing useful work</a> I mentioned in <a href="http://www.eliotlash.com/2011/02/better-living-through-automation-pt-2-the-shell-and-coreutils/">my article on&nbsp;The Shell and Coreutils</a>. I hope this is enough to spark your imagination for the massively powerful automation techniques available by coupling <strong>find</strong> with other command line utilities.</p>
+<h1>Other resources</h1>
+<p>Here are some great resources to learn more:</p>
+<ul>
+<li><strong>man find</strong> - The find manpage on your system has a definitive list of valid expressions and operators.</li>
+<li><a href="http://mywiki.wooledge.org/UsingFind">Greg's Wiki - UsingFind</a> - This is where I learned most of what I know about find along with the man page.</li>
+</ul>

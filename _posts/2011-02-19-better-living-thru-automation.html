@@ -1,0 +1,65 @@
+---
+layout: post
+status: publish
+published: true
+title: Better living through automation, pt. 1
+author:
+  display_name: eliot
+  login: eliot
+  email: fadookie@gmail.com
+  url: ''
+author_login: eliot
+author_email: fadookie@gmail.com
+wordpress_id: 32
+wordpress_url: http://www.eliotlash.com/?p=32
+date: '2011-02-19 01:17:09 +0000'
+date_gmt: '2011-02-19 09:17:09 +0000'
+categories:
+- Scripting
+tags:
+- automation
+comments:
+- id: 10
+  author: eliot
+  author_email: fadookie@gmail.com
+  author_url: ''
+  date: '2011-08-18 00:55:07 +0000'
+  date_gmt: '2011-08-18 07:55:07 +0000'
+  content: It's just come to my attention (thanks to my co-worker <a href="http://twitter.com/#!/mvl"
+    rel="nofollow">@mvl</a rel="nofollow">) that both Python and Ruby are usable as
+    drop-in replacements for AppleScript via something Apple calls their "Scripting
+    Bridge." I'd like to re-evaluate Automator and Mac applications that provide nice
+    AppleScript dictionaries in light of this, since my horrible experiences with
+    writing AppleScript was a major turn-off for me in using these technologies. More
+    info is available in <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/RubyPythonCocoa/Articles/UsingScriptingBridge.html"
+    rel="nofollow">the Apple developer intro to the Scripting Bridge</a>. Today I
+    was able to run their sample code to programmatically add a playlist inside of
+    iTunes from within the Python shell which I thought was really cool!
+---
+<blockquote>Anything that's tedious is repeatable; anything that's repeatable should be done by a computer.</p>
+<p>-Robert Muller</p></blockquote>
+<p>I spend a <em>lot</em> of time working on my computer every day. Many of the tasks that I need to perform on a computer can be incredibly tedious. Copying and pasting text from a website into a spreadsheet. Renaming a bunch of files and moving them to a new location. Zipping a bunch of directories and uploading them to a website one by one. From an early age, I was always frustrated at these kinds of tasks. It's a tragic waste that we have commodity PC's capable of performing billions of calculations a second, but are still left doing the same tedious crap that we were doing 10 years ago.</p>
+<p>Clearly, there's no lack of machine 'brainpower.' What most people lack is the knowledge required to effectively leverage their personal computers to automatically perform tedious tasks for them. I have successfully automated all of the tedious tasks I mentioned above in my own workflow, and many more.</p>
+<p>My mission with this series of articles is to provide a high-level overview of the most effective technologies for automation that I have used, and share some pointers that have been key to my success. There are already many great tutorials that go in depth into how to use these particular technologies. I will try to provide links where appropriate, but a quick Google search is usually sufficient to turn up lots of great resources on any particular technology or program. If a technology I describe sounds useful and interesting to you, I encourage you to go try it! Monkey around with it, Google when you get stuck, and try to solve at least a small part of a real problem you are having that could use some automation. That's how I learned everything that I know now.</p>
+<p>If there's anything you'd like me to explain in more depth, please leave a comment and let me know what it is. I will try to help, or at least point you to where you can find more information.</p>
+<p>I'd like to talk a little bit about Mac OS X. At this time of writing, Mac OS X is my favorite desktop operating system. Here's why:</p>
+<ol>
+<li>By default, everything works pretty much how I want it to.</li>
+<li>Because Mac OS X is built on top of Unix, there's a ton of flexibility built in. At any time, I can drop down to the command line to accomplish what I need to.</li>
+</ol>
+<p>Granted, Mac OS X is nowhere near as configurable and&nbsp;customizable&nbsp;as a modern desktop GNU/Linux system. However, even with the advent of fairly easy-to-use Linux distributions like Ubuntu, I think the barrier to entry might still be a little bit too high for the average user. We'll get there eventually.</p>
+<h1><span style="font-weight: normal;">Automator</span></h1>
+<p><img class="alignright" title="Automator Icon" src="http://eliot.s3.amazonaws.com/eliotlash.com/Automator_Icon.png" alt="Automator Robot Icon" width="297" height="297" /></p>
+<p>From an automation standpoint, Mac OS X is at the top of its game. Included with the OS is a really slick application called <a href="http://en.wikipedia.org/wiki/Automator_(software)">Automator</a>. Automator allows you to "snap together" instructions from a library of parts to create a workflow describing what you want the computer to do. Essentially, it allows you to create your own scripts without writing a line of code. You can even save them as application bundles and send them to other people. This is a great place for someone who wants to dive in to the world of automation without any prior experience. The ability to <a href="http://www.google.com/search?q=automator+actions">install custom "actions"</a> created by others, and write your own actions in <a href="http://www.macosxautomation.com/applescript/">AppleScript</a>, allows room to expand the capabilities of Automator. Some tasks I have used Automator for include:</p>
+<ul>
+<li>Re-sizing, renaming, or moving batches of photos (I&nbsp;recommend&nbsp;the <a href="http://automatorworld.com/archives/propper-cropper/">Proper Cropper</a> action for cropping instead of Apple's default.)</li>
+<li>Performing a series of&nbsp;repetitive&nbsp;keystrokes in an application to load files in by the batch (this made use of a custom AppleScript module to simulate key presses)</li>
+</ul>
+<p>One of the reasons I <em>don't</em> like Automator and don't use it more often is the fact that, as far as I can tell, you <em>have</em> to write your custom code in AppleScript. (<strong>Edit</strong>: I recently discovered that Python and Ruby are available as alternatives, see my comment below.) AppleScript tries to appear like natural language, but it's just a trick. It's just as rigid as any other programming language, but the syntax is just kind of weird and occasionally ambiguous. You are also limited to whatever actions ship with Automator, or whatever ones you can find online or write yourself using AppleScript. In the end, I found Automator a great way to interface specifically with Mac OS X GUI applications and do certain common tasks, but that I had to turn elsewhere for <span style="color: #993300;"><a href="http://www.realultimatepower.net/">real ultimate power</a></span>.</p>
+<p>Up next:</p>
+<ul>
+<li><a href="/2011/02/better-living-through-automation-pt-2-the-shell-and-coreutils/">The Shell and Coreutils</a></li>
+<li><a href="/2011/02/better-living-through-automation-pt-3-shell-scripting-becoming-a-wizard/">Shell Scripting: Becoming a Wizard</a></li>
+<li>Curl: Internet Magic Sauce</li>
+</ul>
+<p>Stay tuned!</p>

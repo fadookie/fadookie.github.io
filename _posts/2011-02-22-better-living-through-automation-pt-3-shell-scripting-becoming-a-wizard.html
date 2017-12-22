@@ -1,0 +1,159 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Better living through automation, pt. 3: Shell Scripting: Becoming a Wizard'
+author:
+  display_name: eliot
+  login: eliot
+  email: fadookie@gmail.com
+  url: ''
+author_login: eliot
+author_email: fadookie@gmail.com
+wordpress_id: 103
+wordpress_url: http://www.eliotlash.com/?p=103
+date: '2011-02-22 21:28:24 +0000'
+date_gmt: '2011-02-23 05:28:24 +0000'
+categories:
+- Programming
+- Scripting
+tags:
+- automation
+- unix
+- commandline
+- scripting
+comments:
+- id: 2
+  author: Rob
+  author_email: themuller@gmail.com
+  author_url: ''
+  date: '2011-02-23 11:30:35 +0000'
+  date_gmt: '2011-02-23 19:30:35 +0000'
+  content: this article is dope-sauce :)
+- id: 3
+  author: Mimi
+  author_email: Mimisanfrancisco@gmail.com
+  author_url: ''
+  date: '2011-02-24 01:41:16 +0000'
+  date_gmt: '2011-02-24 09:41:16 +0000'
+  content: Eliot, this is Great! :)
+- id: 4
+  author: eliot
+  author_email: fadookie@gmail.com
+  author_url: ''
+  date: '2011-02-25 00:08:58 +0000'
+  date_gmt: '2011-02-25 08:08:58 +0000'
+  content: "Thanks for the kind comments, guys! :)\r\nI'm glad you're enjoying this.
+    I hope to publish more articles in this series soon.\r\n\r\nLet me know if there's
+    anything you want me to expand on. Also, if there are any other topics you'd like
+    me to cover, I will try to if I know enough about them."
+- id: 7
+  author: 'Tool tips: Find'
+  author_email: ''
+  author_url: http://www.eliotlash.com/2011/08/tool-tips-find/
+  date: '2011-08-16 11:29:28 +0000'
+  date_gmt: '2011-08-16 18:29:28 +0000'
+  content: "[...] Shell Scripting: Becoming a Wizard, I layed out a magic&nbsp;recipe&nbsp;for
+    productive and useful bash scripts that uses a while loop over [...]"
+- id: 660
+  author: Kariyachan
+  author_email: kardfddi@gami.com
+  author_url: ''
+  date: '2013-02-14 01:29:31 +0000'
+  date_gmt: '2013-02-14 09:29:31 +0000'
+  content: Nice way of explanation thanks Eliot.
+- id: 45836
+  author: Dina
+  author_email: ew386p9xn5@hotmail.com
+  author_url: http://xsoeuia.com
+  date: '2016-05-16 08:47:49 +0000'
+  date_gmt: '2016-05-16 15:47:49 +0000'
+  content: I loved as much as you&#8217;ll receive carried out proper here. The comic
+    strip is tasteful, your authored subject matter stylish. netheverless, you command
+    get got an edginess over that you wish be delivering the following. ill surely
+    come more beforehand once more as precisely the same just about a lot regularly
+    inside of case you protect this hike.
+- id: 45843
+  author: Gabby
+  author_email: l08kut5n@hotmail.com
+  author_url: http://gmgzmj.com
+  date: '2016-05-16 09:55:36 +0000'
+  date_gmt: '2016-05-16 16:55:36 +0000'
+  content: 'Quit whining, gents. It&#8217;s pathetic. Mitt&#8217;s whining will generate
+    the same results it did for his predecessors:Mike Dukakis, 1988: &#8220;I resent
+    it!&#8221;Bob Dole, 1996: &#8220;Stop lying about my record!&#8221;John Kerry,
+    2004: &#8220;Dishonest! Disgraceful! Dec2asible!&amp;#82p1;Man up and tell us
+    what your guy&#8217;s hiding in those tax returns.'
+---
+<p>Using just the shell and the coreutils, it is possible to write commands which wrangle massive amounts of files, translate data into the format you want, etc. But what if you want to take things to the next level?</p>
+<p>This is where scripting comes in. You can write scripts which are capable of performing a lengthy and detailed series of operations in order. Your computer can do these tasks over and over and over, very quickly. Unlike you, your computer doesn't need to sleep or eat. It will perform just as well at 3am as it will at noon. All you need to do to take advantage of this amazing machine is to learn a language that it understands so you can instruct it on what you want it to do.</p>
+<p>The awesome thing is, if you've been using your shell, <em>you already know a scripting language</em>. Every command you type at the command line can be thought of as a shell script.</p>
+<p>I provide an overview of my favorite bash scripting facilities after the jump.</p>
+<p><!--more--></p>
+<p>I will use bash as my example here since I am most familiar with it, and it's likely to be the shell you are using as well. Instead of typing commands into the terminal, we will save them to a file. I&nbsp;recommend&nbsp;a text editor such as the free <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>. You can use TextEdit in plain text mode, but beware that it can sometimes behave poorly and cause&nbsp;unforeseen&nbsp;consequences due to how it handles formatting of line endings. Mac OS X (and almost every other Unix system) ships with a variant of an editor called <strong>vi</strong> which runs in the terminal and is incredibly powerful. <strong>vim </strong>is a <strong>vi</strong> variant and my editor of choice. However, the learning curve for <strong>vi</strong> is really steep, so I wouldn't&nbsp;recommend&nbsp;it for beginners, unless you need to do a lot of work on a remote Unix webserver, are an&nbsp;efficiency&nbsp;freak, or simply want nerd street cred like me. :)</p>
+<p>So, open up a file in your text editor. Type in some commands. Each line of the file represents one command, or command pipeline. So we might type:</p>
+<p>[bash]<br />
+echo "Hello world! Here are your files:"<br />
+ls<br />
+[/bash]</p>
+<p>If we save this file to our home directory as "myscript.sh" and then open Terminal and type the following:</p>
+<pre>bash ~/myscript.sh</pre>
+<p>We should see the script run! It should print "Hello world! Here are your files:", and then a list of files in the current directory.</p>
+<p>This is nice. Just using this method, we can consolidate several&nbsp;separate&nbsp;commands into a single script which will run them all in sequence.</p>
+<p>However, bash provides us with many language features that allow us to give our computer much more flexible instructions. We can tell it to repeat a segment of instructions an arbitrary number of times (a 'for loop' or 'while loop.') We can give it logic to determine what to do in a number of different situations (by using 'if statements.') We can even have our scripts take flags and arguments from the shell itself, like any other command line utility! In effect, we can complement the coreutils by writing our own utilities in bash. Ultimately, this allows us to make our computer 'smart' enough to accomplish large and tedious tasks that would otherwise require an intelligent person like you!</p>
+<p>Now, I am going to give you some <span style="color: #993300;">magic sauce</span>. Remember this later, once you have become more familiar with bash scripting. This little template for a bash script has proven more useful to me recently than anything else. It's in pseudo-code so you'll need to swap out a few things to make it work.</p>
+<p>[bash gutter="false"]<br />
+something that produces output | while read index<br />
+do<br />
+  some command on $index<br />
+done<br />
+[/bash]</p>
+<p>This can also be written on one line. It's less readable, but can be useful since you can test it out directly in the shell without having to save it to a file:</p>
+<p>[bash gutter="false"] something that produces output | while read index; do some command on $index; done [/bash]</p>
+<p>This is the key to&nbsp;<span style="color: #993300;"><a href="http://www.realultimatepower.net/">real ultimate power</a></span>. Why? Two reasons:</p>
+<ol>
+<li>The input can come from ANY command or pipeline of commands. It can come from a file. It doesn't matter. Our script will go over the input line by line and do something related to it.</li>
+<li>The current line of input we're on is stored as a variable, here I've called it index. A variable is just a container for some value, in this case, the contents of the current input line. This allows us to run the same block of code on many different lines of input, munge them around in some way, and execute the result as a command!</li>
+</ol>
+<p>Here is a specific example of a script written using the above template.</p>
+<p>[bash gutter="false"]<br />
+find . -name '*.jpg' | while read index<br />
+do<br />
+	echo mv $index ~/photos/PHOTO_`basename $index`<br />
+done<br />
+[/bash]</p>
+<p>What this script will do is create a list of commands to move all the files ending in .jpg in the current directory or any subdirectories to the folder ~/photos, and prefix PHOTO_ to the file name. It's "nerfed" in the sense that it won't actually execute this set of commands, I did this just in case you wanted to copy this onto your machine so it wouldn't mess up your files. :)</p>
+<p>It's easy to "un-nerf" this script - either delete the "echo" - so that the command being run is <strong>mv</strong>, not <strong>echo</strong> (which was just printing the <strong>mv</strong> command.) You could also pipe the output of this script into a new shell, like so. The second instance of "bash" will read the input line by line and execute it.</p>
+<pre>bash script.sh | bash</pre>
+<p>This script also takes advantage of another powerful bash feature called command substitution. You will notice a command enclosed in `bacticks` (that's what happens when you press the tilde/~ key without pressing shift.) This tells bash to take the output of whatever is inside the backticks, and use that in the final command. So in our example, we're calling the basename utility, which in our example gives us the base name of the file path stored in $index (just the file name without any path information.) Since it's enclosed in backticks, the output of the command will get added to the echo mv command. So in effect, each time the while loop runs, it &nbsp;will execute a command that's &nbsp;something like "echo mv /path/to/file.jpg ~/photos/PHOTO_file.jpg".</p>
+<p>Perhaps not a super exciting example, but it demonstrates the additional flexibility we have with this method over just using utilities such as <strong>find</strong> and <strong>xargs</strong>. With those tools, it gets rather convoluted if you want to do something like move and rename a file based on a pattern. The beauty of this method is that since we, the scripter, control the logic entirely, we can make <span style="color: #993300;">anything</span> happen inside this loop. We can iterate over a list of file name fragments, with each line becoming the next index variable, and then call <strong>find</strong> from within the loop to try and locate files which match the fragment, and do something to them.</p>
+<p>A corollary to the above is the bash for loop, which can loop over the contents of a directory.</p>
+<p>Here are some examples of scripts that I have written entirely in bash:</p>
+<ul>
+<li>Zip up a series of directories one-by-one, and submit the zips to a web application along with a bunch of data gleaned from reading the files in the folder</li>
+<li>Search through my server logs, count accesses to a certain resource, and give me a daily count</li>
+<li>Read in a list of folder name fragments, and do an svn-move of matching folders to a different location in the svn&nbsp;repository.</li>
+<li>Use <strong>sed</strong> to batch-replace a value in a file with something else, and bash file I/O and the <strong>mv</strong> command to replace the original files</li>
+</ul>
+<p>Here are some resources for learning more about bash scripting:</p>
+<ul>
+<li><a href="http://linuxcommand.org/writing_shell_scripts.php">Linuxcommand.org - Writing Shell Scripts</a></li>
+<li><a href="http://www.tldp.org/LDP/abs/html/">Advanced Bash Scripting Guide</a></li>
+<li><a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts.html">Writing Robust Shell Scripts</a> - A must-read once you've finished making toy scripts and want to move on to things more powerful, and therefore dangerous.</li>
+<li><strong>man </strong>- Many of bash's functions and syntax are documented in man pages. Check&nbsp;"man bash" and "man test" for starters.</li>
+<li><strong>help</strong> - Some of bash's commands are built-in. For instance, typing "man cd" will usually take you to the manual for BUILTIN(1) which doesn't have much info. You can use the&nbsp;<strong>help</strong> command to get help on other built-in commands, ex. "help cd".</li>
+<li><a href="http://www.google.com/">Google</a> - As always, if you're stuck, google it!</li>
+</ul>
+<p><span style="color: #993300;"><strong>A word of warning</strong></span>: I find bash an excellent scripting language for tasks of low to moderate complexity. &nbsp;However, the syntax is a bit rigid and opaque compared to recent higher-level languages suitable for scripting, such as PHP and Ruby. After taking an upload script I had written in bash and adding all sorts of features such as command-line flags, error and output logging, etc, I soon regretted it as the 100+ line script became&nbsp;unwieldy. I rewrote the script completely in PHP to make it cleaner. I plan on writing a&nbsp;brief&nbsp;introduction to scripting in high-level languages soon.</p>
+<p>It's certainly possible to write clean and modular bash programs for larger applications, but I find the syntax of other languages more comfortable when I need complex control logic, data parsing, etc.</p>
+<p>However, the ease of converting a shell command into a simple bash script, and the brevity of its syntax still makes bash my language of choice for relatively simple scripts.</p>
+<p>Up Next:</p>
+<ul>
+<li>Curl: Internet Magic Sauce</li>
+<li>Scripting in high-level languages</li>
+</ul>
+<p>Previously in this series:</p>
+<ul>
+<li><a href="/2011/02/better-living-thru-automation/">Better living through automation, pt. 1 (Automator)</a></li>
+<li><a href="/2011/02/better-living-through-automation-pt-2-the-shell-and-coreutils/">The Shell and Coreutils</a></li>
+</ul>

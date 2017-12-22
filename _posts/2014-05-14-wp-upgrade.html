@@ -1,0 +1,38 @@
+---
+layout: post
+status: publish
+published: true
+title: 'wp-upgrade: (nearly) automatic wordpress updating via git'
+author:
+  display_name: eliot
+  login: eliot
+  email: fadookie@gmail.com
+  url: ''
+author_login: eliot
+author_email: fadookie@gmail.com
+wordpress_id: 858
+wordpress_url: http://www.eliotlash.com/?p=858
+date: '2014-05-14 20:53:20 +0000'
+date_gmt: '2014-05-15 03:53:20 +0000'
+categories:
+- Scripting
+- Tools
+tags:
+- tool tips
+- bash
+- wordpress
+- git
+- php
+comments:
+- id: 5135
+  author: Patrick
+  author_email: noyb000@gmail.com
+  author_url: http://ssdpress.com
+  date: '2014-05-15 08:15:21 +0000'
+  date_gmt: '2014-05-15 15:15:21 +0000'
+  content: This looks awesome! Setting this up to rsync the data to another server
+    for off-site backups shouldn't be hard either. Very useful- thanks :-)
+---
+<p>For several years now, I have been using git as a means to manage migration of my website from one version of wordpress to the next. I initially was maintaining documentation for myself on how to do this manually, but later I migrated the documentation into an automatic script. I've decided to clean this up a bit and release it to the public as open source.</p>
+<p>This has really made managing a wordpress site more bearable. I don't allow&nbsp;FTP connections to my website, since FTP is about as secure as a sign on your digital lawn saying "Please do not hack!" Because of this, the built-in automatic update&nbsp;feature has always been useless to me. Using an ssh connection to the webserver as the backbone, it's possible to do more secure automatic updates than built-in feature can provide. (For more info on security, please read <a href="http://codex.wordpress.org/Hardening_WordPress">Hardening Wordpress</a>.) In addition, I can sleep better at night since my website's code is both version-controlled and backed up to an external server. This isn't possible with the traditional "<a href="http://codex.wordpress.org/Installing/Updating_WordPress_with_Subversion">update wordpress via svn</a>" method either.</p>
+<p>Hopefully this will be as useful to you as it was to me. I've tried to make it reasonably configurable, but feel free to fork it and tweak to taste. You can find the code and documentation for <a href="https://github.com/fadookie/wp-upgrade">wp-upgrade on Github</a>.</p>

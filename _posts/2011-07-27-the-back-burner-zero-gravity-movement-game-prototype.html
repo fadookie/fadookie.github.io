@@ -1,0 +1,126 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Tales From The Back Burner: Zero Gravity Movement Game Prototype'
+author:
+  display_name: eliot
+  login: eliot
+  email: fadookie@gmail.com
+  url: ''
+author_login: eliot
+author_email: fadookie@gmail.com
+wordpress_id: 287
+wordpress_url: http://www.eliotlash.com/?p=287
+date: '2011-07-27 02:13:58 +0000'
+date_gmt: '2011-07-27 09:13:58 +0000'
+categories:
+- Programming
+- Game Design
+- Game Development
+tags:
+- game design
+- back burner
+- prototype
+- udk
+- zero gravity
+- math
+comments:
+- id: 64
+  author: Nate Fowler
+  author_email: natefowler23@gmail.com
+  author_url: ''
+  date: '2011-09-11 04:10:13 +0000'
+  date_gmt: '2011-09-11 11:10:13 +0000'
+  content: Very cool! I would very much like to see this turn into something more
+    than a prototype. This is actually very similar to a project I have starting up
+    right now. We're trying to do the whole realistic movement in zero-G thing UDK
+    as well. Our idea was to use the mouse to actually grab surfaces and pull yourself
+    along as well. We haven't begun digging into the code too much yet so we're not
+    all that sure where to begin, but seeing this makes me somewhat hopeful. I don't
+    mean to be rude or intrusive here, but do you have any pro tips for some guys
+    just starting something like this? Things to modify, places to change and stuff
+    like that? Also, I would have sent this in an e-mail, but I couldn't find one
+    on your website.
+- id: 66
+  author: eliot
+  author_email: fadookie@gmail.com
+  author_url: ''
+  date: '2011-09-11 12:44:22 +0000'
+  date_gmt: '2011-09-11 19:44:22 +0000'
+  content: "Hi Nate!\r\nI was also just starting out in UDK. This is an ambitious
+    first project. My main question is what type of camera do you want to have? You'll
+    have an easier time if you stick to a roll-locked camera. It took days and days
+    for me to implement the custom 6DOF camera shown here and it's still a bit unnerving
+    to use.\r\n\r\nThe zero-gravity itself is very easy to accomplish. I can send
+    you my demo level. Basically you just make a gravity volume around the entire
+    level and set gravity to 0. Then you need a physics volume around the spawn point
+    that pulls the player onto the floor so they can walk (since players spawn a bit
+    above the ground.) I also made those crates physics objects that are asleep at
+    the beginning of the level (I think.) I forget if I had to change the gravity
+    on those individual objects too. You can shoot them with your gun and they float
+    around and collide in zero G, it's pretty awesome.\r\n\r\nYou have to start learning
+    UnrealScript to and write a custom UDK game to really make this anything other
+    than a Zero-Gravity map for Unreal Tournament, though.\r\n\r\nI do the pulling
+    by using some <a href=\"http://udn.epicgames.com/Three/DevelopmentKitFirstScriptProject.html\"
+    rel=\"nofollow\">picking code from a UDK sample</a>. I used the code from this
+    example to do picking against scene objects, which in the process creates a vector
+    from the player towards that object. If the object passes a distance check, I
+    just add the vector pointing towards that object to the player's velocity. Simple
+    and a bit crude, but it works. You could also multiply that vector by a scalar
+    (i.e. a single floating point or integer number) to increase the power.\r\n\r\nYou
+    need to learn about 3D vector math in order to do this as well. Here are some
+    good resources:\r\nhttp://stevehazen.wordpress.com/2010/02/19/3d-programming-basics-working-with-and-visualizing-vectors/
+    - Check out the articles linked from this post\r\nhttp://blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/
+    - Check out parts 2 and 3 too\r\nhttp://wiki.beyondunreal.com/Legacy:UnrealScript_Vector_Maths\r\nhttp://wiki.beyondunreal.com/Legacy:Vector\r\nhttp://web.archive.org/web/20080509053949/http://chimeric.beyondunreal.com/tutorials/vectors.php\r\n\r\nI
+    am also using Visual Studio with <a href=\"http://pixelminegames.com/nfringe/\"
+    rel=\"nofollow\">nFringe</a> to edit my UnrealScript and build my code, which
+    is very nice as it offers code completion, documentation tooltips, and jump-to-definition
+    functionality for UnrealScript.\r\n\r\nIf you give me more details about the project
+    I might be able to provide more specific advice and possibly sample code. You
+    can email me at fadookie@gmail.com."
+- id: 737
+  author: Alex D
+  author_email: alexbd88@me.com
+  author_url: ''
+  date: '2013-03-11 13:20:32 +0000'
+  date_gmt: '2013-03-11 20:20:32 +0000'
+  content: I just begun using UDK and I am attempting to create something similar.
+    I am also new to scripting. So far, I have a zero-g volume and a physics volume
+    around the spawn. I found a 6DOF tutorial for UDK but the author intended it to
+    be used with jet-pack control. I do not want to start scripting and end up miles
+    in the wrong direction. Would you be able to help me? I would like to implement
+    a 6DOF camera and the ability to walk on multiple surface, as seen in your prototype
+    video.
+- id: 738
+  author: Alex D
+  author_email: alexbd88@me.com
+  author_url: ''
+  date: '2013-03-11 13:47:01 +0000'
+  date_gmt: '2013-03-11 20:47:01 +0000'
+  content: I am working on the multiple surface issue right now. I created a gravity
+    volume alongside a wall and set it to -520 on the Z axis.  I need it to be on
+    the X axis. How can I do this?
+- id: 45834
+  author: Deandra
+  author_email: zl7mgavh@hotmail.com
+  author_url: http://sneoetu.com
+  date: '2016-05-16 08:39:40 +0000'
+  date_gmt: '2016-05-16 15:39:40 +0000'
+  content: Sure courtesy is apeprciated, I always recline my seat slowly, usually
+    in incriments.  But I&#8217;m not goig to ask the person behind me if it&#8217;s
+    ok to do so.  If it bothers you that much, don&#8217;t you think you should just
+    pay for an upgrade?
+---
+<p>I'd like to show off some projects of mine that are currently on the back burner, to avoid them from gathering too much dust. :)</p>
+<p>[embed]http://www.youtube.com/watch?v=D-UT8Vfok1E[/embed]</p>
+<p>Here is a video of a game prototype I was working on in UDK. My idea is to express the feeling of being in zero gravity in a way that hasn't been done in games before (i.e. no jetpack.) You move by pushing yourself along surfaces and kicking off them towards other surfaces. Once airborne, you can't alter your velocity without grabbing on or bumping in to something (or possibly throwing stuff out of your pockets.) I hope someday to make a real game from this concept.</p>
+<p>I reflect on this prototype, why it went to the back burner, and what I learned after the jump.</p>
+<p><!--more--></p>
+<p>Why it's back-burnered: I got bogged down in a lot of difficult 3D math. Also, I'm finding it a pain to just figure out how to do what I want in UnrealScript due to lack of documentation. The last time I worked on this, I had just finished implementing a custom six degrees of freedom (6dof) camera that uses quaternions to represent rotation instead of the default euler angles. After jamming on this for several weekends, I sort of lost steam on the project.</p>
+<p>I have inklings of a vision for a larger exploration/puzzle game in zero gravity, but I'm not quite sure how I want to proceed.&nbsp;Also, I think this idea of mine might be too ambitious in scope.</p>
+<p>Actually building this prototype helped me immensely to understand the issues that would arise in designing this sort of game. I hit an issue with 6dof cameras that I have not seen solved yet by anyone who has attempted this. Notice that if you rotate the camera in small circles in any game with a 6dof camera (say, in <a href="http://www.gog.com/en/gamecard/descent_1_descent_2">Descent</a>, or<a href="http://store.steampowered.com/app/18110/"> Shattered Horizon</a> when you're not walking on a surface) you'll see it start to roll. The larger the circle, the more exaggerated the motion is. This means that if, for instance, you yaw left by 90 degrees (i.e. look along your left shoulder), then pitch up by 90 degrees (look straight up from there) and then yaw right by 90 degrees (move your head to the right) you will be looking forward again, but the world will have rolled by 90 degrees! This feels really unnatural in a 1st-person game where the mouse is supposed to control head movement. (Below is a diagram of roll, pitch, and yaw axes if you are unfamiliar with the terms.)</p>
+<p style="text-align: center;"><a href="http://en.wikipedia.org/wiki/Flight_dynamics#Aircraft"><img class="aligncenter" title="Diagram of roll, pitch, and yaw" src="http://eliot.s3.amazonaws.com/eliotlash.com/300px-Rollpitchyawplain.png" alt="" width="300" height="196" /></a></p>
+<p>The only alternative I can think of, that I was working on coding before I back-burnered this project, is a system where you can control the position of your body seperately from your head. In that case, you would be able to orient your body with six degrees of freedom, and could in fact do the rotation described above, and it would be OK since you are in zero gravity and deliberately re-orienting yourself. But to keep it so that the situation described above doesn't happen when you are just casually looking around, the roll on your head would be locked, so if you did the rotation described above, your view would not roll (this is how regular FPS cameras work.) If anyone is interested, I can make some videos that illustrate the issue I am describing here.</p>
+<p>Music: TiLT - Nova Lab Background Theme<br />
+<a title="http://www.medievalfuture.com" dir="ltr" rel="nofollow" href="http://www.medievalfuture.com/" target="_blank">http://www.medievalfuture.com</a></p>

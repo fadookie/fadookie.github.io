@@ -1,0 +1,46 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Tool tips: Tee (and standard streams)'
+author:
+  display_name: eliot
+  login: eliot
+  email: fadookie@gmail.com
+  url: ''
+author_login: eliot
+author_email: fadookie@gmail.com
+wordpress_id: 238
+wordpress_url: http://www.eliotlash.com/?p=238
+date: '2011-02-27 15:07:05 +0000'
+date_gmt: '2011-02-27 23:07:05 +0000'
+categories:
+- Scripting
+- Tools
+tags:
+- automation
+- unix
+- commandline
+- tool tips
+comments: []
+---
+<p><strong><img class="alignright" title="PVC Tee" src="http://eliot.s3.amazonaws.com/eliotlash.com/tee.jpg" alt="A physical tee for pipes made from PVC" width="275" height="229" /></strong></p>
+<p><strong>Tee</strong> is a wonderful but often-overlooked core utility. It's purpose is to intercept a pipeline, write the output to a file, and pass the output along the pipe. It can be used to easily add output logging to any command pipeline or script.</p>
+<p>To get the most out of <strong>tee</strong>, it pays to read up on how input, output, and errors are handled by the shell. (As a byproduct, a good understanding of bash I/O redirection will make you a more efficient bash user and scripter!)</p>
+<p>There are three <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> that can be used by any unix program: stdin, stdout, and stderr. Each of these can be thought of as a file. By default, all unix programs read from stdin, write normal output to stdout, and write error messages to stderr. &nbsp;The shell's job is to take things being read or written to one of the standard streams and redirect them through pipes that you specify. By default, the shell will take the characters you type into the terminal while a program is running and pass them to that program's stdin. It will take the characters written by the program to stderr and stdout and print them to your terminal.</p>
+<p>If you instead insert a pipe, like so:</p>
+<p><code>command1 | command2</code></p>
+<p>the shell will redirect the characters written to command1's stdout to command2's stdin via a pipe. Command1's stderr will still get written to your terminal.</p>
+<p>Bash has syntax for specifying custom redirections. For instance, you can redirect stdout to a file instead of your terminal:</p>
+<p><code>command1 > file</code></p>
+<p>This is where <strong>tee</strong> comes in. If we want to both log something to a file and pass it along a pipe, or just have it written to the terminal (by leaving tee as the last command in the pipe,) we can insert tee into our pipe:</p>
+<p><code>command1 | tee file | command2</code></p>
+<p>If you want to do something other than use tee to log just stdout, you should read more about bash I/O redirection. Here are some resources:</p>
+<ul>
+<li><a href="http://tldp.org/LDP/abs/html/ioredirintro.html">Advanced Bash-Scripting Guide: A&nbsp;Detailed Introduction to I/O and I/O Redirection</a></li>
+<li><a href="http://tldp.org/LDP/abs/html/io-redirection.html">Advanced Bash-scripting guide: I/O Redirection</a></li>
+<li><a href="http://mywiki.wooledge.org/BashFAQ/047">Greg's Wiki:&nbsp;How can I redirect stderr to a pipe?</a></li>
+<li><a href="http://mywiki.wooledge.org/BashFAQ/014">Greg's Wiki: How can I redirect the output of multiple commands at once?</a></li>
+</ul>
+<p>Typical invocation:</p>
+<p><code>some command that produces output | tee file</code></p>

@@ -1,0 +1,122 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Better living through automation, pt. 2: The Shell and Coreutils'
+author:
+  display_name: eliot
+  login: eliot
+  email: fadookie@gmail.com
+  url: ''
+author_login: eliot
+author_email: fadookie@gmail.com
+wordpress_id: 100
+wordpress_url: http://www.eliotlash.com/?p=100
+date: '2011-02-20 14:00:48 +0000'
+date_gmt: '2011-02-20 22:00:48 +0000'
+categories:
+- Scripting
+tags:
+- automation
+- unix
+- commandline
+comments:
+- id: 9
+  author: 'Tool tips: Find'
+  author_email: ''
+  author_url: http://www.eliotlash.com/2011/08/tool-tips-find/
+  date: '2011-08-16 22:27:13 +0000'
+  date_gmt: '2011-08-17 05:27:13 +0000'
+  content: "[...] reading this article and experimenting a bit, you should now be
+    able to understand the find examples for doing useful work I mentioned in my article
+    on&nbsp;The Shell and Coreutils. I hope this is enough to spark your [...]"
+- id: 43722
+  author: dieta para bajar
+  author_email: stormyfallis@aol.com
+  author_url: http://Botoslaszlo.hu/index.php?Itemid=477
+  date: '2015-11-05 19:19:12 +0000'
+  date_gmt: '2015-11-06 03:19:12 +0000'
+  content: "Cualquier intento de reducir peso requiere un esfuerzo y, por consiguiente,
+    \r\ninter&eacute;s, voluntad y motivaci&oacute;n."
+- id: 55006
+  author: True CommissionBinary Secret SystemMake Over $4,000/Week OnlineMake Lots
+    Of Money OnlineEasiest Way To Make Lots Of Cash OnlineMake Money Without Selling
+    Anything OnlineMake Money Without A WebsiteWays To Make A Lot Of Money Without
+    Having Your Own Websit
+  author_email: ernestokaestner@gmail.com
+  author_url: http://oi2015.89749.truecommission.com/
+  date: '2017-03-20 20:13:00 +0000'
+  date_gmt: '2017-03-21 03:13:00 +0000'
+  content: "I'm very happy to uncover this page. I wanted to thank you for ones \r\ntime
+    for this fantastic read!! I definitely loved every bit of it and i also have you
+    \r\nbook-marked to look at new information in your \r\nsite."
+- id: 56058
+  author: cream pembesar payudara
+  author_email: coreycenteno@gmx.net
+  author_url: http://creampembesarpayudara.id/
+  date: '2017-06-17 02:38:22 +0000'
+  date_gmt: '2017-06-17 09:38:22 +0000'
+  content: "I was wondering if you ever thought of changing the page layout \r\nof
+    your site? Its very well written; I love \r\nwhat youve got to say. But maybe
+    you could a little more in the way of content so people could connect with it
+    better.\r\nYouve got an awful lot of text for only having 1 or 2 pictures.\r\nMaybe
+    you could space it out better?"
+- id: 58169
+  author: Concrete Cleaning
+  author_email: lemuelrobichaud@gawab.com
+  author_url: https://superiorpowerwashing.tumblr.com/
+  date: '2017-10-25 10:21:34 +0000'
+  date_gmt: '2017-10-25 17:21:34 +0000'
+  content: "It's appropriate tije to make a few plans for the future and it's time
+    to be happy.\r\nI havbe read this post and iff I may just I want to suggest yoou
+    some attention-grabbing issues or suggestions.\r\nPerhaps you can write next articles
+    regarding tgis article.I wieh \r\nto read even more things approximately it!"
+---
+<p><em>From here on out, I'm going to assume that you have access to a Unix environment. If you use Windows, I suggest that you install <a href="http://www.cygwin.com/">Cygwin</a> to get a Unix environment on your machine if you want to follow along. The default Windows terminal is also pretty crappy so I&nbsp;recommend&nbsp;installing the rxvt-native terminal from within Cygwin.</em></p>
+<p>Every operating system in the Unix family (including Mac OS X) ships with a set of core utilities, or coreutils. These are small, fast programs which are invoked via the command line. The coreutils&nbsp;are truly the holy grail of automation.</p>
+<p>By design, each utility is very, very good at one specific thing. For instance, <strong>cut</strong> will print out one or several slices of the text you pass into it, as determined by a "delimiter&nbsp;character" that you specify. <strong>paste</strong>, on the other hand, will join two files together line-by-line. Together, these programs can be used, for example, to combine reports from multiple files and format the output how you want.</p>
+<p>This design is known as the Unix "toolbox" philosophy. The analogy is that a swiss army knife is supposed to be good at everything. But you can't build a house with a swiss army knife. Professional contractors have a toolbox full of highly specialized tools that can only do one thing, but are extremely good at that one thing. The same goes for each of the core utilities. Some software tries to be a swiss army knife and often winds up as the "jack of all trades, master of none." The core utilities are like the contractor's toolbox. By using several specialized tools in combination, you can achieve quick and powerful results.</p>
+<p>The glue for the coreutils that allows you to use them together is called the shell. The shell is what you are interacting with when you start your "terminal" program, such as the one provided by Mac OS X located under /Applications/Utilities/Terminal.app. Bash is the most popular shell today, and is the default shell on most modern systems including recent versions of Mac OS X.</p>
+<p>The shell interprets commands that you type into it to construct a pipeline between the different programs you are using. So, if I type:</p>
+<pre>ls</pre>
+<p>The <strong>ls</strong> program lists the files in the current directory and returns them to the shell, which prints them to the screen. But now, if I type</p>
+<pre>ls | grep "MyFile"</pre>
+<p>the shell is taking the output of <strong>ls</strong>, and instead of printing it out, it passes it to another program called <strong>grep</strong>. <strong>grep </strong>searches through the output of <strong>ls</strong> for the text "MyFile", and sends only the lines that contain it back to the shell. The shell prints those lines to the screen.</p>
+<p>Where we really get cooking is when we start using output from one command as instructions for another command. The <strong>find</strong> utility is great for this, as is the <strong>xargs</strong> utility. Find will search recursively in the folder you specify for a set of files which match the parameters you give it. Then, using the -exec flag, you can tell find to execute any command on each one of those files. <strong>xargs</strong> does something similar, but it can take any text as an input (typically, file names) and provide them as arguments to another program.&nbsp;<strong>find</strong> / <strong>xargs </strong>are designed to control&nbsp;other programs, and can be used for tasks such as a<strong> </strong>batch move, batch rename, batch conversion, etc.</p>
+<p>so in keeping with our current example:</p>
+<pre>ls | grep "MyFile" | xargs open</pre>
+<p>The output of <strong>grep</strong>, those files or folders containing the word "MyFile", is passed by the shell to <strong>xargs</strong>. <strong>xargs</strong> passes them to the <strong>open</strong> command, a Mac OS X utility that will try to use Finder to open each file. Simple functionality like this can be more elegantly achieved using only the find command. <a href="/2011/08/tool-tips-find/">See my tutorial on using find to learn more about this incredible tool</a>.</p>
+<p>Also worth mentioning are <strong>sed</strong> and <strong>awk</strong>. These programs are used to perform manipulation of text inside a pipeline.</p>
+<p>There is a learning curve here, but the more I learned about how to effectively use the command line and the coreutils, the more my productivity increased.</p>
+<p>Mastery of your shell's syntax is crucial in becoming effective. Using the shell, you can construct complicated pipes which branch and merge data and execute commands to do practically anything on a massive scale.</p>
+<p>To become a master of using the shell to automate things, I recommend that you practice doing more and more things from the shell instead of from a GUI. You need to understand what the most common utilities do, and the common arguments/flags that you can pass them in order to get their full range of functionality. If/when you move on to writing scripts, this knowledge will help you take advantage of built-in functionality instead of trying to implement it yourself. It becomes easier to practice shell skills if you run a website, since you often have to log in via ssh to a webserver in order to install software and make configuration changes on the webserver. I picked up most of my basic shell skills through running my personal website.</p>
+<p><strong><span style="color: #993300;">A word of warning</span></strong>: Make sure you are familiar with using a command normally before invoking it with&nbsp;<strong>find</strong> or&nbsp;<strong>xargs</strong>. This type of usage requires knowledge of how the shell and different programs handle spaces, etc. You can cause damage or data loss if you don't know what you're doing. So learn the basics first. Test out your batch commands by adding&nbsp;<strong>echo</strong> in front of the command, so it will print instead of execute and you can inspect it. Test out your execution on one or two files before you execute the whole batch.</p>
+<p>Here are some resources for learning more about the command line:</p>
+<ul>
+<li><a href="http://linuxcommand.org/index.php">LinuxCommand.org</a> - Excellent in-depth overview of the command line, suitable for total beginners</li>
+<li><a href="http://mywiki.wooledge.org/BashGuide">Bash Guide on Greg's Wiki</a></li>
+<li><a href="http://mywiki.wooledge.org/BashGuide"></a><strong>man </strong>- Take advantage of the built-in manuals for each command on your system by&nbsp;typing "man somecommand". Type q to exit.</li>
+<li>Built-in help: Many programs have built-in help. This is usually available by invoking the program with the -h or --help flag, such as "mv --help".</li>
+<li><a href="http://www.google.com/">Google</a> - I can't stress enough how useful it is to just look something up on Google when you're stuck. Chances are, somebody else was having this exact same problem and found a solution!</li>
+</ul>
+<p><a name="find_examples"></a><br />
+Here are some examples of tasks and automation that I frequently perform using the shell and some utilities. These are provided not as a tutorial, but an example of the kind of powerful automation you can achieve from a well-crafted command.</p>
+<p>I've added echo statements to all the examples that will cause a change so they will print the commands they would execute instead of actually executing them. I'm worried about people randomly pasting commands into their terminal and running them. Here's a hint: DON'T DO THAT! With great power comes great responsibility. Make sure you understand what a command does before you execute it on your system so you don't get owned!&nbsp;Note that find (and other) syntax can vary from system to system and shell to shell so these may not all work in your environment.</p>
+<p>Move a bunch of files&nbsp;matching my search term to a different location using <strong>find:</strong></p>
+<pre>find . -name 'test*' -exec echo mv {} ../foodir \;</pre>
+<p>Batch-convert a bunch of files matching my search term using <strong>find</strong> and a converter program (imagemagick in this example):</p>
+<pre>find . -name '*.jpg' -exec echo convert {} {}.png \;</pre>
+<p>Tidy up the output of a monitoring program like <strong>ps</strong> to only contain the information i'm interested in,&nbsp;using <strong>head</strong>, <strong>grep, cat,</strong> and bash input substitution syntax:</p>
+<pre>cat <(ps|head -1) <(ps|grep bash)</pre>
+<p>Use <strong>diff</strong>,&nbsp;<strong>comm, </strong>and other programs to find the differences between two files/directories, or perform set theory operations</p>
+<p><a href="http://www.catonmat.net/blog/set-operations-in-unix-shell/">There's a whole in-depth article on this!</a></p>
+<p>I hope I have whetted your appetite a bit to go learn more about using the command line. With practice, you can accomplish in a few keystrokes what could take tons of clicking and dragging in a GUI.</p>
+<p>Up next:</p>
+<ul>
+<li><a href="/2011/02/better-living-through-automation-pt-3-shell-scripting-becoming-a-wizard/">Shell Scripting: Becoming a Wizard</a></li>
+<li>Curl: Internet Magic Sauce</li>
+</ul>
+<p>Previously in this series:</p>
+<ul>
+<li><a href="/2011/02/better-living-thru-automation/">Better living through automation, pt. 1 (Automator)</a></li>
+</ul>
