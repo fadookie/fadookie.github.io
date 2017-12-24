@@ -25,6 +25,11 @@ twitter_username: jekyllrb
 github_username:  jekyll
 permalink: /:year/:month/:title/
 
+collections:
+  works:
+    output: true
+    permalink: /:collection/:name
+
 # Build settings
 markdown: kramdown
 theme: minima

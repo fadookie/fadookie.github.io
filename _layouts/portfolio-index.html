@@ -3,3 +3,8 @@ layout: default
 ---
 <h1>Hello portfolio index!</h1> 
 {{ content }}
+{% for item in site.works reversed %}
+  <h2>{{ item.title }}</h2>
+  <p>{{ item.description }}</p>
+  <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+{% endfor %}
