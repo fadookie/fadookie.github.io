@@ -17,6 +17,17 @@ date_gmt: '2012-05-03 19:48:05 +0000'
 categories: []
 tags: []
 comments: []
+portfolio:
+  download: >-
+    http://eliot.s3.amazonaws.com/releases/art/AnimatedGraf/AnimatedGraf_20120512_67f0129.zip
+  website: '<a href="https://github.com/fadookie/AnimatedGraf">GitHub</a>'
+  time: Free time over 2 days
+  role: Programmer
+  technologies: 'Processing, Mesh library'
+  cover: 'http://www.eliotlash.com/mainsite/wp-content/uploads/screenshot00.png'
+  media:
+    - type: image
+      value: 'http://www.eliotlash.com/mainsite/wp-content/uploads/screenshot00.png'
 ---
 <p>I saw <a href="http://www.paloaltopublicart.org/Collection/Col26/01.html">this really cool mural</a> in Palo Alto, and it reminded me of a Voronoi diagram. This led me to thinking that it would be cool to model the mural itself in code so it could be made interactive and rendered in real-time. This is the result.</p>
 <p>The graph is generated from an array of random points, which are randomly wiggled over time. The mouse generates another point in the graph, so you can slide your mouse around to interact with it. The white lines represent the edges of polygons in the Voronoi diagram which are centered around the points. The dark blue lines connect the points with their nearest neighbors, which form a Delaunay diagram. All the points are surrounded by a convex hull which also looks like a white line.</p>
