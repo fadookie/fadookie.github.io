@@ -4,7 +4,8 @@ layout: default
 <h1>Hello portfolio index!</h1> 
 {{ content }}
 {% for item in site.works reversed %}
-  <h2>{{ item.title }}</h2>
-  <p>{{ item.description }}</p>
-  <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+  <div>
+      <p><a href="{{ item.url }}"><img src="{{ item.portfolio.cover | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}"/></a></p>
+      <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+  </div>
 {% endfor %}
