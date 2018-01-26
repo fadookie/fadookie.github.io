@@ -24,13 +24,14 @@ tags:
 comments: []
 ---
 
-*Last update: Feb 25, 2016*
+*Last update: Jan 26, 2018*
 
 I've been using Unity3D a lot these days for business and pleasure. I've been posting some of my code to gists on GitHub to serve as examples or as open-source components. I thought that I should collect them in one place to make the good stuff easier to browse. I intend to update this post occasionally to collect these as I make them. If you want something open-sourced, let me know here and I can add a license if there isn't one already in the file.
 
 # Blog Posts
 
-[One-Liner singletons in Unity](https://www.packtpub.com/books/content/one-liner-singletons-unity)
+[One-Liner singletons in Unity](https://www.packtpub.com/books/content/one-liner-singletons-unity)<br/>
+(See also: [updated version of the Services class from this post w/ more methods & unit tests](https://gist.github.com/fadookie/96a5967e55b3df3379d71c2f519c38c0).)
 
 [Making an in-game console in Unity, part 1](https://www.packtpub.com/books/content/making-game-console-unity-part-1)
 
