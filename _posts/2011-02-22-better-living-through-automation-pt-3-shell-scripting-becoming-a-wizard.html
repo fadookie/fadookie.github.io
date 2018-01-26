@@ -92,36 +92,36 @@ comments:
 <p><!--more--></p>
 <p>I will use bash as my example here since I am most familiar with it, and it's likely to be the shell you are using as well. Instead of typing commands into the terminal, we will save them to a file. I&nbsp;recommend&nbsp;a text editor such as the free <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>. You can use TextEdit in plain text mode, but beware that it can sometimes behave poorly and cause&nbsp;unforeseen&nbsp;consequences due to how it handles formatting of line endings. Mac OS X (and almost every other Unix system) ships with a variant of an editor called <strong>vi</strong> which runs in the terminal and is incredibly powerful. <strong>vim </strong>is a <strong>vi</strong> variant and my editor of choice. However, the learning curve for <strong>vi</strong> is really steep, so I wouldn't&nbsp;recommend&nbsp;it for beginners, unless you need to do a lot of work on a remote Unix webserver, are an&nbsp;efficiency&nbsp;freak, or simply want nerd street cred like me. :)</p>
 <p>So, open up a file in your text editor. Type in some commands. Each line of the file represents one command, or command pipeline. So we might type:</p>
-<p>[bash]<br />
-echo "Hello world! Here are your files:"<br />
-ls<br />
-[/bash]</p>
+<pre>
+echo "Hello world! Here are your files:"
+ls
+</pre>
 <p>If we save this file to our home directory as "myscript.sh" and then open Terminal and type the following:</p>
 <pre>bash ~/myscript.sh</pre>
 <p>We should see the script run! It should print "Hello world! Here are your files:", and then a list of files in the current directory.</p>
 <p>This is nice. Just using this method, we can consolidate several&nbsp;separate&nbsp;commands into a single script which will run them all in sequence.</p>
 <p>However, bash provides us with many language features that allow us to give our computer much more flexible instructions. We can tell it to repeat a segment of instructions an arbitrary number of times (a 'for loop' or 'while loop.') We can give it logic to determine what to do in a number of different situations (by using 'if statements.') We can even have our scripts take flags and arguments from the shell itself, like any other command line utility! In effect, we can complement the coreutils by writing our own utilities in bash. Ultimately, this allows us to make our computer 'smart' enough to accomplish large and tedious tasks that would otherwise require an intelligent person like you!</p>
 <p>Now, I am going to give you some <span style="color: #993300;">magic sauce</span>. Remember this later, once you have become more familiar with bash scripting. This little template for a bash script has proven more useful to me recently than anything else. It's in pseudo-code so you'll need to swap out a few things to make it work.</p>
-<p>[bash gutter="false"]<br />
-something that produces output | while read index<br />
-do<br />
-  some command on $index<br />
-done<br />
-[/bash]</p>
+<pre>
+something that produces output | while read index
+do
+  some command on $index
+done
+</pre>
 <p>This can also be written on one line. It's less readable, but can be useful since you can test it out directly in the shell without having to save it to a file:</p>
-<p>[bash gutter="false"] something that produces output | while read index; do some command on $index; done [/bash]</p>
+<pre>something that produces output | while read index; do some command on $index; done</pre> 
 <p>This is the key to&nbsp;<span style="color: #993300;"><a href="http://www.realultimatepower.net/">real ultimate power</a></span>. Why? Two reasons:</p>
 <ol>
 <li>The input can come from ANY command or pipeline of commands. It can come from a file. It doesn't matter. Our script will go over the input line by line and do something related to it.</li>
 <li>The current line of input we're on is stored as a variable, here I've called it index. A variable is just a container for some value, in this case, the contents of the current input line. This allows us to run the same block of code on many different lines of input, munge them around in some way, and execute the result as a command!</li>
 </ol>
 <p>Here is a specific example of a script written using the above template.</p>
-<p>[bash gutter="false"]<br />
+<pre>
 find . -name '*.jpg' | while read index<br />
-do<br />
-	echo mv $index ~/photos/PHOTO_`basename $index`<br />
-done<br />
-[/bash]</p>
+do
+	echo mv $index ~/photos/PHOTO_`basename $index`
+done
+</pre>
 <p>What this script will do is create a list of commands to move all the files ending in .jpg in the current directory or any subdirectories to the folder ~/photos, and prefix PHOTO_ to the file name. It's "nerfed" in the sense that it won't actually execute this set of commands, I did this just in case you wanted to copy this onto your machine so it wouldn't mess up your files. :)</p>
 <p>It's easy to "un-nerf" this script - either delete the "echo" - so that the command being run is <strong>mv</strong>, not <strong>echo</strong> (which was just printing the <strong>mv</strong> command.) You could also pipe the output of this script into a new shell, like so. The second instance of "bash" will read the input line by line and execute it.</p>
 <pre>bash script.sh | bash</pre>

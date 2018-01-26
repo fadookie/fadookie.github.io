@@ -133,20 +133,19 @@ comments:
 <li>Programmer assistance (No out-of-the-box debugger. The preprocessor's errors are often frustratingly non-specific, and can leave you blindly hunting for syntax errors across multiple files.)</li>
 <li>Audio <del>(there is no out-of-the-box support, but there are <a href="http://processing.org/reference/libraries/">libraries available</a>)</del>&nbsp;Processing now includes the excellent <a href="http://code.compartmental.net/tools/minim/">Minim library</a>, but you have to explicitly import it. Audio still appears to be an afterthought in the documentation and tutorials.</li>
 </ul>
-<p>[embed]http://www.youtube.com/watch?v=2Z99TtxGjds[/embed]</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2Z99TtxGjds?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <p>I have been prototyping games and visualizers (including the one above) in Processing for several months now, and have learned some incredibly useful things that I think any programmer looking into it should know. Here they are:</p>
 <p><!--more--></p>
 <h1>Processing is Java.</h1>
 <p>This took me a really long time to realize. I mean, it <strong>really</strong> is just Java, with a slightly simpler syntax. When you hit "Run," processing runs your .pde files through a preprocessor that converts them into one giant Java class. Your classes are all inner classes of your main class, which extends PApplet. This is how all of your custom objects can access "global" variables and functions defined in your main class, as well as all the Processing API methods. No magic.</p>
 <p>What this means is that out-of-the-box, you can use tons of classes from the Java standard library. My absolute favorites here are Java's generic collections... <a href="http://download.oracle.com/javase/1,5.0/docs/api/java/util/HashMap.html">HashMap<K, V></a> and <a href="http://download.oracle.com/javase/1.5.0/docs/api/java/util/ArrayList.html">ArrayList<E></a>. In the Processing documentation, they have lots of examples using the non-generic versions of ArrayList and HashMap. This means that you have to manually unbox (cast) items coming out of those collections. What a pain. Don't bother, just use generics!</p>
 <p>You can also use Java's for-each syntax to iterate through these collections rather than manually using the iterator as they describe in their documentation. For example, the following is perfectly valid in Processing, you don't even need to import java.util (that's part of the default Processing imports behind the scenes):</p>
-<p>[java]<br />
-HashMap<String, String> hm = new HashMap<String,String>();<br />
-hm.put("somekey","foo");<br />
-for(String item : hm.values() ){<br />
-     println(item);<br />
-}<br />
-[/java]</p>
+<p><pre>HashMap<String, String> hm = new HashMap<String,String>();
+hm.put("somekey","foo");
+for(String item : hm.values() ){
+     println(item);
+}
+</pre></p>
 <p>A trivial example, but generic collections are extremely useful, since you can lean on the compiler to keep track of the types you're using. It's a bit more verbose to create these objects, but it's much less verbose to use them.</p>
 <h1>Processing is not Java.</h1>
 <blockquote><p>Processing is based on Java, but because program elements in Processing are fairly simple, you can learn to use it even if you don't know any Java. If you're familiar with Java, it's best to forget that Processing has anything to do with Java for a while, until you get the hang of how the API works. - <a href="http://processing.org/learning/overview/">Ben Fry</a></p></blockquote>
@@ -155,7 +154,7 @@ for(String item : hm.values() ){<br />
 <p>This also leads into the next most important thing on my list:</p>
 <h1>You can use a real debugger.</h1>
 <p>I have had many headaches trying to debug runtime errors in my sketches without the assistance of a modern interactive debugger. I had started getting used to print debugging to figure out what was going on, but in something as complicated as a game engine, I was really hurting for a real debugger. Then I discovered an awesome trick.</p>
-<div>If you are only developing for desktop OSes, you might want to try out writing Processing inside of an IDE. Here's an article on <a href="http://processing.org/learning/eclipse/">Processing in Eclipse</a>. However, as of Processing 1.5, it would be non-trivial to do this and take advantage of the low-friction Android support as well. I need my prototype to run on Android, so I choose to keep my sources in .pde files, which I can use to build for desktop OSes and Android from essentially the same code base. I figured out how to do that AND use a real debugger.</div>
+<p>If you are only developing for desktop OSes, you might want to try out writing Processing inside of an IDE. Here's an article on <a href="http://processing.org/learning/eclipse/">Processing in Eclipse</a>. However, as of Processing 1.5, it would be non-trivial to do this and take advantage of the low-friction Android support as well. I need my prototype to run on Android, so I choose to keep my sources in .pde files, which I can use to build for desktop OSes and Android from essentially the same code base. I figured out how to do that AND use a real debugger.</p>
 <div>The first step is to export the Java version of your sketch:</div>
 <div>
 <p>Run and then quit your sketch to ensure your build products are up to date. Click on File -> Export Application. Check only your development platform. Click export.</p>
@@ -174,9 +173,9 @@ for(String item : hm.values() ){<br />
 <li>If you are using any Processing libraries, you should also locate their jar files and add them to the classpath.</li>
 </ol>
 <p>Phew! At least we only need to do that once. And now it should be all set up for your debugging pleasure.</p>
-<div>Since the project is set up to load external sources, just re-run your sketch and re-export the sources from within the Processing Development Environment (PDE) to make them update instantly inside NetBeans. It's awesome.</div>
-<div>The Java source is similar enough to the Processing source that I always know what line to fix after I hunt down the bug. I then make the fix in the .pde version - the .java file will be overwritten by the Processing export the next time I need to debug.</div>
-<div>Another neat thing I like is using the navigator to peruse my inner classes. Holding the Option/Alt key and clicking the top-level arrow, and then normal clicking it again gives a compact overview of all my inner classes that I can then selectively expand and click to jump to the appropriate field or method. This is helpful for locating places to set breakpoints and watches.</div>
+<p>Since the project is set up to load external sources, just re-run your sketch and re-export the sources from within the Processing Development Environment (PDE) to make them update instantly inside NetBeans. It's awesome.</p>
+<p>The Java source is similar enough to the Processing source that I always know what line to fix after I hunt down the bug. I then make the fix in the .pde version - the .java file will be overwritten by the Processing export the next time I need to debug.</p>
+<p>Another neat thing I like is using the navigator to peruse my inner classes. Holding the Option/Alt key and clicking the top-level arrow, and then normal clicking it again gives a compact overview of all my inner classes that I can then selectively expand and click to jump to the appropriate field or method. This is helpful for locating places to set breakpoints and watches.</p>
 </div>
 <h1>You can use a real text editor.</h1>
 <p>In the PDE, select Preferences -> Use external editor. If you are like me and <a href="http://www.eliotlash.com/2011/08/searching-for-the-perfect-editor/">believe that mastering a powerful text editor is a worthwhile investment of your time</a>, you are free to use your favorite editor when making Processing sketches. The built-in editor in the PDE is okay, but very basic. I am using Vim with <a href="http://www.vim.org/scripts/script.php?script_id=2115">this ftplugin for Processing</a>. It supports syntax highlighting, indentation, and documentation lookup via shift+K. It is wonderful. I keep the PDE open in the margin of my screen to do the build and provide a place to display output, it still can be helpful sometimes in locating the line of a NullPointerException, etc.</p>
