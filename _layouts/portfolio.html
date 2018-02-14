@@ -1,5 +1,32 @@
 ---
 layout: default
 ---
-<h1>Hello portfolio!</h1> 
-{{ content }}
+<h1>{{ page.title }}</h1> 
+<div class="entry-content">
+    <img class="alignleft" src="{{ page.portfolio.cover | replace: ".png", "-300x169.png" |  replace: ".jpg", "-300x169.jpg" | replace: ".jpeg", "-300x169.jpg"  }}">
+    {{ content }}
+    {% if page.portfolio.play %}
+    <h3 class="go_link"><a href="{{ page.portfolio.play }}">Play!</a></h3>
+    {% endif %}
+    {% if page.portfolio.download %}
+    <h3 class="go_link"><a href="{{ page.portfolio.download }}">Download!</a></h3>
+    {% endif %}
+    <table class="project_info_box">
+        {% if page.portfolio.event %}
+        <tr><td>Event</td><td>{{ page.portfolio.event }}</td></tr>
+        {% endif %}
+        {% if page.portfolio.time %}
+        <tr><td>Time</td><td>{{ page.portfolio.time }}</td></tr>
+        {% endif %}
+        {% if page.portfolio.team %}
+        <tr><td>Team</td><td>{{ page.portfolio.team }}</td></tr>
+        {% endif %}
+        {% if page.portfolio.role %}
+        <tr><td>Role</td><td>{{ page.portfolio.role }}</td></tr>
+        {% endif %}
+        {% if page.portfolio.technologies %}
+        <tr><td>Technologies</td><td>{{ page.portfolio.technologies }}</td></tr>
+        {% endif %}
+        <tr><td>Completion Date</td><td>{{ page.date | date_to_long_string }}</td></tr>
+    </table>
+</div>

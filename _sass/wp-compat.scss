@@ -38,3 +38,25 @@ img.aligncenter {
     width: 155px;
     height: 200px;
 }
+
+.entry-content {
+    padding: 22px 0 0 0;
+}
+
+h3.go_link {
+    font-size: 150%;
+    margin-top: 20px;
+}
+
+table.project_info_box {
+    border: none;
+    border-collapse: collapse;
+
+    tr {
+        border-bottom: 1px solid #ccc;
+    }
+
+    th, td {
+        padding: .7em 1.25em;
+    }
+}
