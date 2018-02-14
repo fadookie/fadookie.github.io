@@ -2,10 +2,14 @@
 layout: default
 ---
 <h1>Hello portfolio index!</h1> 
+<div id="content">
 {{ content }}
+    <div class="portfolio_thumb_section">
 {% for item in site.works reversed %}
-  <div>
-      <p><a href="{{ item.url }}"><img src="{{ item.portfolio.cover | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}"/></a></p>
-      <p><a href="{{ item.url }}">{{ item.title }}</a></p>
-  </div>
+        <div class="portfolio_thumb_item">
+            <a href="{{ item.url }}"><img class="alignleft" src="{{ item.portfolio.cover | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}"/></a>
+            <a href="{{ item.url }}">{{ item.title }}</a>
+        </div>
 {% endfor %}
+    </div>
+</div>
