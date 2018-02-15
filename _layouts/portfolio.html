@@ -3,7 +3,9 @@ layout: default
 ---
 <h1>{{ page.title }}</h1> 
 <div class="entry-content">
-    <img class="alignleft" src="{{ page.portfolio.cover | replace: ".png", "-300x169.png" |  replace: ".jpg", "-300x169.jpg" | replace: ".jpeg", "-300x169.jpg"  }}">
+    <a href="{{ page.portfolio.cover }}">
+        <img class="alignleft" src="{{ page.portfolio.cover | replace: ".png", "-300x169.png" |  replace: ".jpg", "-300x169.jpg" | replace: ".jpeg", "-300x169.jpg"  }}">
+    </a>
     {{ content }}
     {% if page.portfolio.play %}
     <h3 class="go_link"><a href="{{ page.portfolio.play }}">Play!</a></h3>
@@ -11,6 +13,7 @@ layout: default
     {% if page.portfolio.download %}
     <h3 class="go_link"><a href="{{ page.portfolio.download }}">Download!</a></h3>
     {% endif %}
+    {% if page.portfolio.event or page.portfolio.time or page.portfolio.team or page.portfolio.role or page.portfolio.technologies %}
     <table class="project_info_box">
         {% if page.portfolio.event %}
         <tr><td>Event</td><td>{{ page.portfolio.event }}</td></tr>
@@ -29,4 +32,18 @@ layout: default
         {% endif %}
         <tr><td>Completion Date</td><td>{{ page.date | date_to_long_string }}</td></tr>
     </table>
+    {% endif %}
+    {% for media in page.portfolio.media %}
+        {% if media.type == "image" %}
+        <a href="{{ media.value }}">
+            <img width="150" height="150" src="{{ media.value | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}">
+        </a>
+        {% endif %}
+        {% if media.type == "youtube" %}
+        <p>
+            <iframe width="540" height="405" src="https://www.youtube-nocookie.com/embed/{{ media.value }}?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </p>
+        {% endif %}
+    {% endfor %}
+    <a href="/">Back</a>
 </div>
