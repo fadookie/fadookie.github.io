@@ -12,7 +12,7 @@ const getPosts = async (query) => {
   return _.chain(posts)
     .groupBy('ID')
     .transform((result, post, postId) => {
-      post[0].meta = {}
+      post[0].meta = {};
       result[postId] = post[0];
     })
     .value();
@@ -27,7 +27,7 @@ const main = async () => {
     let value;
     switch(meta.meta_key) {
       case 'portfolio_media':
-        const serialized = atob(meta.meta_value).toString()
+        const serialized = atob(meta.meta_value).toString();
         const attachmentJson = JSON.parse(execSync(`php ./deserialize.php '${serialized}'`).toString());
         const attachmentData = _.chain(attachmentJson)
           .map(attachment => {
@@ -57,7 +57,7 @@ const main = async () => {
 
   _.mapValues(posts, (post) => {
 
-    const filepath = `${__dirname}/../_works/${post.post_name}.html`
+    const filepath = `${__dirname}/../_works/${post.post_name}.html`;
     const fileContents = readFileSync(filepath).toString();
     const frontMatterRegexp = /---/g;
     frontMatterRegexp.exec(fileContents);
