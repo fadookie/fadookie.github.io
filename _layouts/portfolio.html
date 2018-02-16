@@ -15,6 +15,9 @@ layout: default
     {% endif %}
     {% if page.portfolio.event or page.portfolio.time or page.portfolio.team or page.portfolio.role or page.portfolio.technologies %}
     <table class="project_info_box">
+        {% if page.portfolio.website %}
+        <tr><td>Website</td><td>{{ page.portfolio.website }}</td></tr>
+        {% endif %}
         {% if page.portfolio.event %}
         <tr><td>Event</td><td>{{ page.portfolio.event }}</td></tr>
         {% endif %}
