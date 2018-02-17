@@ -52,7 +52,7 @@ const main = async () => {
     const medium = imageS3URL.replace(imageFile, imageMeta.sizes.medium.file);
     const large = imageMeta.sizes.large ? imageS3URL.replace(imageFile, imageMeta.sizes.large.file) : undefined;
 
-    return large ? { thumbUrl: thumb, mediumUrl: medium, largeUrl: large } : { thumbUrl: thumb, mediumUrl: medium };
+    return large ? { value: imageS3URL, thumb, medium, large } : { value: imageS3URL, thumb, medium };
   };
 
   postMeta.forEach((meta) => {
@@ -68,13 +68,12 @@ const main = async () => {
         if (groupedAttachments.image) {
           const coverImage = _.head(groupedAttachments.image);
           const coverImageUrls = getImageUrls(coverImage);
-          posts[meta.post_id].meta.cover = Object.assign({ value: getImageInfo(coverImage.value).value }, coverImageUrls);
+          posts[meta.post_id].meta.cover = coverImageUrls;
 
           const otherImages = _.tail(groupedAttachments.image);
           otherImagesPretty = _.map(otherImages, (otherImage) => {
-            const info = getImageInfo(otherImage.value);
             const urls = getImageUrls(otherImage);
-            return Object.assign({ type: 'image', value: info.value }, urls);
+            return Object.assign({ type: 'image' }, urls);
           });
           console.log('got other images:', otherImagesPretty);
           // otherImagesPretty = _.map(otherImages, attachment =>
