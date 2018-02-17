@@ -3,8 +3,8 @@ layout: default
 ---
 <h1>{{ page.title }}</h1> 
 <div class="entry-content">
-    <a href="{{ page.portfolio.cover }}">
-        <img class="alignleft" src="{{ page.portfolio.cover | replace: ".png", "-300x169.png" |  replace: ".jpg", "-300x169.jpg" | replace: ".jpeg", "-300x169.jpg"  }}">
+    <a href="{{ page.portfolio.cover.value }}">
+        <img class="alignleft" src="{{ page.portfolio.cover.medium }}">
     </a>
     {{ content }}
     {% if page.portfolio.play %}
@@ -48,5 +48,7 @@ layout: default
         </p>
         {% endif %}
     {% endfor %}
-    <a href="/">Back</a>
+    <p>
+        <a href="/">Back</a>
+    </p>
 </div>
