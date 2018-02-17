@@ -68,7 +68,7 @@ const main = async () => {
         if (groupedAttachments.image) {
           const coverImage = _.head(groupedAttachments.image);
           const coverImageUrls = getImageUrls(coverImage);
-          posts[meta.post_id].meta.cover = coverImageUrls;
+          posts[meta.post_id].meta.cover = Object.assign({ value: getImageInfo(coverImage.value).value }, coverImageUrls);
 
           const otherImages = _.tail(groupedAttachments.image);
           otherImagesPretty = _.map(otherImages, (otherImage) => {
@@ -109,19 +109,25 @@ const main = async () => {
 
     const filepath = `${__dirname}/../_works/${post.post_name}.html`;
     const fileContents = readFileSync(filepath).toString();
-    const frontMatterRegexp = /---/g;
-    frontMatterRegexp.exec(fileContents);
+    const frontMatterRegexp = /---\n/g;
+    const frontMatterStart = frontMatterRegexp.exec(fileContents);
+    const frontMatterStartIndex = frontMatterStart.index + frontMatterStart[0].length;
     const frontMatterEnd = frontMatterRegexp.exec(fileContents); // get second match
 
-    const portfolioYaml = yaml.safeDump({ portfolio: post.meta });
+    const frontMatterYaml = fileContents.slice(frontMatterStartIndex, frontMatterEnd.index);
+    const frontMatterObj = yaml.safeLoad(frontMatterYaml);
 
-    const spliceString = (string, index, newString) =>
-      string.slice(0, index) + newString + string.slice(index);
-    const newFileContents = spliceString(fileContents, frontMatterEnd.index, portfolioYaml);
+    frontMatterObj.portfolio = post.meta;
 
-    //writeFileSync(filepath, newFileContents);
+    const newFrontMatterYaml = yaml.safeDump(frontMatterObj);
 
-    console.log('wrote to', filepath, ': ', portfolioYaml);
+    const spliceString = (string, start, end, newString) =>
+      string.slice(0, start) + newString + string.slice(end);
+    const newFileContents = spliceString(fileContents, frontMatterStartIndex, frontMatterEnd.index, newFrontMatterYaml);
+
+    writeFileSync(filepath, newFileContents);
+
+    console.log('wrote to', filepath, ': ', newFileContents);
   });
   console.log('done.');
 };
