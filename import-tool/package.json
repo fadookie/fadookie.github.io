@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "js-yaml": "3.10.0",
-    "lodash": "4.17.4",
+    "lodash": "4.17.13",
     "mysql2": "1.5.1",
     "sequelize": "4.28.6"
   }
