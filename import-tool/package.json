@@ -13,6 +13,6 @@
     "js-yaml": "3.10.0",
     "lodash": "4.17.13",
     "mysql2": "1.5.1",
-    "sequelize": "4.28.6"
+    "sequelize": "5.15.1"
   }
 }
