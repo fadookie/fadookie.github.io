@@ -39,6 +39,8 @@ I've been using Unity3D a lot these days for business and pleasure. I've been po
 
 # Utilities
 
+[SpriteSlicer](https://github.com/fadookie/SpriteSlicer), Tool to export Unity sprite sheet slices as individual images
+
 [Templates for creating C# plain classes, interfaces, and unit tests from the Editor](https://gist.github.com/fadookie/c983b078028033d4b9b4)
 
 [Unispawn (Multiple Unity Instance Spawner for OSX)](http://www.eliotlash.com/2014/05/unispawn/ "Unispawn")
