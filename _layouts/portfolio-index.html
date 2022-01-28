@@ -8,6 +8,7 @@ layout: default
         <div class="portfolio_thumb_item">
             <a href="{{ item.url }}"><img class="alignleft" src="{{ item.portfolio.cover.thumb }}"/></a>
             <a href="{{ item.url }}">{{ item.title }}</a>
+            <p class="portfolio_index_date">{{ item.date | date: "%Y"  }}</p> 
         </div>
 {% endfor %}
     </div>

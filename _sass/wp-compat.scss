@@ -28,15 +28,16 @@ img.aligncenter {
 }
 
 .portfolio_thumb_section {
-     overflow: auto;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
 }
 
 .portfolio_thumb_item {
-    float: left;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    width: 155px;
-    height: 200px;
+}
+
+.portfolio_index_date {
+    font-size: 10pt;
+    color: gray;
 }
 
 .entry-content {
