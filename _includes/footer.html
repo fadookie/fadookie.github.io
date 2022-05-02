@@ -26,6 +26,12 @@
           </li>
           {% endif %}
 
+          {% if site.mastodon_url %}
+          <li>
+            {% include icon-mastodon.html url=site.mastodon_url username=site.mastodon_username %}
+          </li>
+          {% endif %}
+
           {% if site.twitter_username %}
           <li>
             {% include icon-twitter.html username=site.twitter_username %}

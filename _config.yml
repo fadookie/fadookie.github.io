@@ -22,6 +22,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Eliot_L
 github_username:  fadookie
+mastodon_url: https://mastodon.social/@Eliot_L
+mastodon_username: '@Eliot.L@mastodon.social'
 permalink: /:year/:month/:title/
 
 collections:

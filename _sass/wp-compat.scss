@@ -70,3 +70,14 @@ table.project_info_box {
         padding: .7em 1.25em;
     }
 }
+
+.icon {
+    svg {
+        max-width: 16px;
+        max-height: 16px; 
+    }
+}
+
+.footer-col-2 {
+    width: calc(30% - (30px / 2));
+}
