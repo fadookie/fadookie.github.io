@@ -29,12 +29,13 @@ portfolio:
     large: >-
       /assets/ttr_tour.jpg
   media:
-    - type: youtube
-      value: f9JUwOavKdk
-    - type: youtube
-      value: fVnS-y0SYzE
-    - type: youtube
-      value: 0ZoPUTMv0B0
+    # Videos are down
+    # - type: youtube
+    #   value: f9JUwOavKdk
+    # - type: youtube
+    #   value: fVnS-y0SYzE
+    # - type: youtube
+    #   value: 0ZoPUTMv0B0
     - type: image
       value: >-
         /assets/ttr4_big.jpeg

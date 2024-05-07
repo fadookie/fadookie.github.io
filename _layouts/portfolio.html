@@ -33,7 +33,9 @@ layout: default
         {% if page.portfolio.technologies %}
         <tr><td>Technologies</td><td>{{ page.portfolio.technologies }}</td></tr>
         {% endif %}
+        {% unless page.portfolio.in_progress %}
         <tr><td>Completion Date</td><td>{{ page.date | date_to_long_string }}</td></tr>
+        {% endunless %}
     </table>
     {% endif %}
     {% for media in page.portfolio.media %}

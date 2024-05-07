@@ -15,6 +15,7 @@ categories: []
 tags: []
 comments: []
 portfolio:
+  in_progress: true
   time: '>1.5 Years (Ongoing)'
   team: 'Akili Interactive'
   role: Programmer
