@@ -16,7 +16,8 @@ tags: []
 comments: []
 portfolio:
   download: 'https://globalgamejam.org/2021/games/star-crossed-sonata-2'
-  event: '<a href="https://globalgamejam.org/2021/jam-sites/ggj-sacramento">Global Game Jam Sacramento 2020</a>'
+  website: '<a href="https://github.com/fadookie/ggj2021">GitHub</a>'
+  event: '<a href="https://globalgamejam.org/2021/jam-sites/ggj-sacramento">Global Game Jam Sacramento 2021</a>'
   time: 48 Hours
   team: '7'
   role: Programmer

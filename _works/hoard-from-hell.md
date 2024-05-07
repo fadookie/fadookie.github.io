@@ -16,6 +16,7 @@ tags: []
 comments: []
 portfolio:
   download: 'https://globalgamejam.org/2019/games/hoard-hell'
+  website: '<a href="https://github.com/fadookie/ggj2019">GitHub</a>'
   event: '<a href="https://globalgamejam.org/2019/jam-sites/square-one-clubs">Global Game Jam Sacramento 2019</a>'
   time: 48 Hours
   team: '6'

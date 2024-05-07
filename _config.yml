@@ -20,10 +20,11 @@ description: >- # this means to ignore newlines until "baseurl:"
     Portfolio (games, interactive art, live music visuals, etc.) and blog of Eliot Lash.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Eliot_L
 github_username:  fadookie
 mastodon_url: https://social.coop/@Eliot_L
 mastodon_username: '@Eliot.L@social.coop'
+itchio_url: https://eliot-l.itch.io
+itchio_username: 'eliot-l'
 permalink: /:year/:month/:title/
 
 collections:
