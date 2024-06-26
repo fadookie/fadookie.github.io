@@ -38,6 +38,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Silence deprecation warnings from minima theme per https://github.com/jekyll/minima/issues/709#issuecomment-1439967963
+sass:
+  quiet_deps: true
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
