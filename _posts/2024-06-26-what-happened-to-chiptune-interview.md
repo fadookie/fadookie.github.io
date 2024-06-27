@@ -27,7 +27,7 @@ tags:
 
 I was interviewed for [What Happened to Chiptune?](https://whathappenedtochiptune.org/), a podcast about the lifecycle of the Chiptune scene. We talked about my involvement with the Bay Area scene, my work doing [live music visuals](/works/live-music-visuals), developing the [Game Visualizer](/works/game-visualizer-1) and [Triggerboy](/works/triggerboy), and my general history with game development and thoughts about the past and future of indie games and Chiptunes.
 
-The full interview is below.
+The full interview is below. [Episode page and show notes are here](https://whathappenedtochiptune.org/episodes/eliot-lash-fKUoUVng).
 
 <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/6124967f-60db-4209-bdc5-3492679339e2?dark=false"></iframe>
 
