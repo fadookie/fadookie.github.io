@@ -15,15 +15,15 @@ categories: []
 tags: []
 comments: []
 portfolio:
-  download: 'https://github.com/fadookie/ggj2018/releases/tag/v1.0-RC01'
+  download: 'https://github.com/fadookie/ggj2018/releases/tag/v1.1'
   website: '<a href="https://github.com/fadookie/ggj2018">GitHub</a>'
   event: '<a href="https://globalgamejam.org/2018/games/phobos-r-us">Global Game Jam Sacramento 2018</a>'
   time: |-
     48 Hours (Jam Version)<br/>
     ~3 Months (Post-Jam Version)
   team: '4'
-  role: Programmer, Sound Designer
-  technologies: 'GZDoom, SLADE 3, ACS, ZScript'
+  role: Programmer
+  technologies: 'GZDoom, SLADE 3, ACS, DECORATE, ZScript'
   cover:
     value: >-
       /assets/imps_r_us.png
@@ -33,6 +33,10 @@ portfolio:
       /assets/imps_r_us.png
     large: >-
       /assets/imps_r_us.png
-  media: []
+  media:
+    - type: youtube
+      value: B_CPfhE6HGQ
 ---
-<p>A DOOM mod about a disgruntled IMPloyee... This is our first mod for DOOM/GZDoom, it was pretty intense to learn all this during the jam!</p>
+A DOOM mod about a disgruntled IMPloyee... This is our first mod for DOOM/GZDoom, it was pretty intense to learn all this during the jam!
+
+The video below contains a full playthrough of the game, so just be aware it will spoil it if you want to play it yourself first!
