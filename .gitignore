@@ -32,3 +32,6 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 npm-debug.log
+
+# Local gems
+/.gems
