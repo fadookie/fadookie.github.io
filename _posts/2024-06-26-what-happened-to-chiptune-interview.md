@@ -10,8 +10,6 @@ author:
   url: ''
 author_login: eliot
 author_email: fadookie@gmail.com
-wordpress_id: 287
-wordpress_url: http://www.eliotlash.com/?p=287
 date: '2024-06-26 08:00:00 -0700'
 categories:
 - Programming
