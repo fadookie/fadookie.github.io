@@ -21,6 +21,14 @@ img.aligncenter {
 	clear: both;
 }
 
+img.gallery_thumb {
+    object-fit: cover;
+}
+
+.youtube_player {
+    margin-top: 5px;
+}
+
 #content {
     /* margin:0 0 0 10px; */
     width:540px;

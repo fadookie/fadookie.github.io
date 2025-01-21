@@ -42,14 +42,14 @@ layout: default
         {% if media.type == "image" %}
         <a href="{{ media.value }}">
             {% if media.thumb %}
-            <img width="150" height="150" src="{{ media.thumb }}">
+            <img class="gallery_thumb" width="150" height="150" src="{{ media.thumb }}">
             {% else %}
-            <img width="150" height="150" src="{{ media.value | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}">
+            <img class="gallery_thumb" width="150" height="150" src="{{ media.value | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}">
             {% endif %}
         </a>
         {% endif %}
         {% if media.type == "youtube" %}
-        <p>
+        <p class="youtube_player">
             <iframe width="540" height="405" src="https://www.youtube-nocookie.com/embed/{{ media.value }}?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </p>
         {% endif %}
