@@ -31,16 +31,23 @@ img.gallery_thumb {
 
 #content {
     /* margin:0 0 0 10px; */
-    width:540px;
+    max-width:540px;
+    margin-left: auto;
+    margin-right: auto;
     overflow:hidden;
 }
 
+$portfolio_thumb_item_width: 150px;
+
 .portfolio_thumb_section {
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(auto-fit, minmax($portfolio_thumb_item_width, max-content));
+     grid-column-gap: 30px;
+     justify-content: center;
 }
 
 .portfolio_thumb_item {
+    max-width: $portfolio_thumb_item_width;
 }
 
 .portfolio_index_date {
