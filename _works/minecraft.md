@@ -55,7 +55,7 @@ I embarked on a quest to make these tools, to varying degrees of completion and 
 
 I think overall my efforts to create tooling to support my main project were ultimately more successful than the project itself. It went through three iterations: first, as a mod for the [Fabric mod loader](https://fabricmc.net/). Then, as a vanilla-compatible server using server-side plugins such as [ModelEngine](https://mythiccraft.io/index.php?resources/model-engine%E2%80%94ultimate-entity-model-manager-1-19-4-1-20-4.1213) to add support for custom entities. Finally, when the StormCraft project shuttered due to a long bout of inactivity, I took some of the assets I had made and commissioned and contributed them to [Leaf's Cosmere Suite mod](https://github.com/leafreynolds/cosmere). More details and graphics from the mod can be found on the [17th Shard StormCraft forum thread](https://www.17thshard.com/forums/topic/96185-stormcraft-a-minecraft-modserver/).
 
-<video width="426" height="240" controls>
+<video class="responsive_video" controls>
   <!-- <source src="/assets/minecraft-rockbuds.mp4" type="video/mp4"> -->
   <source src="http://eliot.s3.amazonaws.com/eliotlash.com/minecraft-rockbuds.mp4" type="video/mp4">
   Your browser does not support the video tag.

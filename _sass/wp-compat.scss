@@ -23,6 +23,11 @@ img.aligncenter {
 
 img.gallery_thumb {
     object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.responsive_video {
+    width: 100%;
 }
 
 .youtube_player {
@@ -109,7 +114,7 @@ table.project_info_box {
 }
 
 .footer-col-2 {
-    width: calc(30% - (30px / 2));
+    width: calc(50% - (30px / 2));
 }
 
 .header-image {

@@ -16,7 +16,7 @@ tags: []
 comments: []
 portfolio:
   in_progress: true
-  time: '>1.5 Years (Ongoing)'
+  time: '>2 Years (Ongoing)'
   team: 'Akili Interactive'
   role: Programmer
   technologies: 'Unity 3D, Swift, Kotlin'
@@ -28,8 +28,6 @@ portfolio:
     medium: >-
       /assets/akili-eotc1.webp
   media:
-    - type: youtube
-      value: 6yZDvdaozgM
     - type: image
       value: >-
         /assets/akili-erx1.webp
