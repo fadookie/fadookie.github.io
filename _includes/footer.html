@@ -32,6 +32,12 @@
           </li>
           {% endif %}
 
+          {% if site.youtube_username %}
+          <li>
+            {% include icon-youtube.html url=site.youtube_url username=site.youtube_username %}
+          </li>
+          {% endif %}
+
           {% if site.itchio_url %}
           <li>
             {% include icon-itchio.html url=site.itchio_url username=site.itchio_username %}
