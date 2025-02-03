@@ -1,16 +1,13 @@
 // @ts-check
 
 function onReady() {
+  const categoryPicker = /** @type HTMLSelectElement */ (document.getElementById("category_picker"));
+  categoryPicker.classList.remove("invisible");
 }
 
 function selectCategory(evt) {
-  // const isVisibleClass = "is_visible";
   const selectElement = evt.target;
   /** @type String */
-  const value = selectElement.value;
-  const newLocation = (() => {
-    if (value == 'Featured') return '/';
-    return `/portfolio/${value.toLowerCase()}`;
-  })();
+  const newLocation = selectElement.value;
   document.location = newLocation;
 }
