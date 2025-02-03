@@ -11,7 +11,7 @@ author:
 author_login: eliot
 author_email: fadookie@gmail.com
 date: '2006-01-01 12:00:00 +0000'
-categories: []
+categories: ['Games', 'Mods', 'Personal']
 tags: []
 comments: []
 portfolio:

@@ -11,7 +11,7 @@ author:
 author_login: eliot
 author_email: fadookie@gmail.com
 date: '2024-01-28 12:00:00 +0000'
-categories: []
+categories: ['Games', 'Personal', 'Featured']
 tags: []
 comments: []
 portfolio:

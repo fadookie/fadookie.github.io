@@ -1,7 +1,6 @@
 // @ts-check
 
 function onReady() {
-  console.log('onReady');
   initCategoryPicker();
 }
 
@@ -16,9 +15,7 @@ function initCategoryPicker() {
   const categories = allClasses.filter(x => x.startsWith(categoryClassPrefix))
     .map(x => x.replace(categoryClassPrefix, ""));
 
-  
   const categoryPicker = /** @type HTMLSelectElement */ (document.getElementById("category_picker")); 
-  console.log('initCategoryPicker categories:', categories, 'categoryPicker:', categoryPicker);
   categories.forEach(category => {
     categoryPicker.add(new Option(category));
   });
@@ -30,17 +27,18 @@ function selectCategory(evt) {
   const selectElement = evt.target;
   const value = selectElement.value;
   const selectedCategoryClass = `${categoryClassPrefix}${value}`;
+
   const [selectedItems, unselectedItems] = (() => {
     if (value == 'All') return [thumbItems, []];
     const selectedItems = thumbItems.filter(x => x.classList.contains(selectedCategoryClass));
     const unselectedItems = thumbItems.filter(x => !x.classList.contains(selectedCategoryClass));
     return [selectedItems, unselectedItems];
   })();
+
   selectedItems.forEach(item => {
     item.classList.add(isVisibleClass);
   });
   unselectedItems.forEach(item => {
     item.classList.remove(isVisibleClass);
   });
-  console.log(`selectCategory evt:`, evt, 'value:', value, 'selectedCategoryClass:', selectedCategoryClass);
 }
