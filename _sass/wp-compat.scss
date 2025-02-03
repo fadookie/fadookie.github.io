@@ -49,12 +49,16 @@ img.gallery_thumb {
     height: 100%;
 }
 
+.page-content {
+    padding: 40px 0;
+}
+
 #content {
     /* margin:0 0 0 10px; */
     max-width:540px;
     margin-left: auto;
     margin-right: auto;
-    overflow:hidden;
+    overflow: visible;
 }
 
 $portfolio_thumb_item_width: 150px;
@@ -69,6 +73,13 @@ $portfolio_thumb_item_width: 150px;
 .portfolio_thumb_item {
     max-width: $portfolio_thumb_item_width;
     display: none;
+    position: relative;
+}
+
+#category_picker {
+    position: absolute;
+    left: 0;
+    top: -30px;
 }
 
 .portfolio_thumb_item.is_visible {

@@ -2,17 +2,19 @@
 layout: default
 ---
 <script src="{{ site.baseurl }}{% link assets/js/main.js %}"></script>
-<select id="category_picker" onchange = "selectCategory(event)">
-    <option>All</option>
-    <option>Work</option>
-    <option>Personal</option>
-</select>
 <div id="content">
 {{ content }}
     <div class="portfolio_thumb_section">
 {% for item in site.works reversed %}
-<!-- item: {{ item.categories }} -->
-        <div class="portfolio_thumb_item is_visible {{ item.categories | join: ' ' }}">
+    {%- capture category_classes -%}
+    {%- for category in item.categories -%}portfolio_thumb_category_{{category}} {% endfor -%}
+    {%- endcapture %}
+        <div class="portfolio_thumb_item is_visible {{ category_classes }}">
+            {%- if forloop.first %}
+            <select id="category_picker" onchange = "selectCategory(event)">
+                <option>All</option>
+            </select>
+            {% endif -%}
             <a href="{{ item.url }}"><img class="alignleft" src="{{ item.portfolio.cover.thumb }}"/></a>
             <a href="{{ item.url }}">{{ item.title }}</a>
             <p class="portfolio_index_date">{{ item.date | date: "%Y"  }}</p> 
