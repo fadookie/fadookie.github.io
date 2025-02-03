@@ -11,14 +11,14 @@ let thumbItems = null;
 
 function initCategoryPicker() {
   thumbItems = Array.from(document.getElementsByClassName('portfolio_thumb_item'));
-  const allClasses = Array.from(new Set(thumbItems.flatMap(x => Array.from(x.classList))));
-  const categories = allClasses.filter(x => x.startsWith(categoryClassPrefix))
-    .map(x => x.replace(categoryClassPrefix, ""));
+  // const allClasses = Array.from(new Set(thumbItems.flatMap(x => Array.from(x.classList))));
+  // const categories = allClasses.filter(x => x.startsWith(categoryClassPrefix))
+  //   .map(x => x.replace(categoryClassPrefix, ""));
 
-  const categoryPicker = /** @type HTMLSelectElement */ (document.getElementById("category_picker")); 
-  categories.forEach(category => {
-    categoryPicker.add(new Option(category));
-  });
+  // const categoryPicker = /** @type HTMLSelectElement */ (document.getElementById("category_picker")); 
+  // categories.forEach(category => {
+  //   categoryPicker.add(new Option(category));
+  // });
 }
 
 function selectCategory(evt) {

@@ -33,6 +33,8 @@ collections:
   works:
     output: true
     permalink: /:collection/:name
+  portfolio:
+    output: true
 
 # Build settings
 markdown: kramdown

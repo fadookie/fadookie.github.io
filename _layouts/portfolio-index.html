@@ -1,24 +1,35 @@
 ---
 layout: default
 ---
+{%- assign categories = "Featured,All,Games,Hardware,Personal,Work,Mods,Visuals,Art" | split: "," -%}
 <script src="{{ site.baseurl }}{% link assets/js/main.js %}"></script>
 <div id="content">
+    Selected category: {{page.selected_category}}
 {{ content }}
     <div class="portfolio_thumb_section">
+{%- assign placed_category_picker = false -%}
 {% for item in site.works reversed %}
-    {%- capture category_classes -%}
-    {%- for category in item.categories -%}portfolio_thumb_category_{{category}} {% endfor -%}
-    {%- endcapture %}
-        <div class="portfolio_thumb_item is_visible {{ category_classes }}">
-            {%- if forloop.first %}
+    {%- assign show_item = false -%}
+    {%- if page.selected_category == "All" -%}
+        {%- assign show_item = true -%}
+    {%- elsif item.categories contains page.selected_category -%}
+        {%- assign show_item = true -%}
+    {%- endif -%}
+    {%- if show_item -%}
+        <div class="portfolio_thumb_item is_visible">
+            {%- if placed_category_picker == false %}
             <select id="category_picker" onchange = "selectCategory(event)">
-                <option>All</option>
+                {%- for category in categories %}
+                <option{%- if category == page.selected_category %} selected{%- endif -%}>{{ category}}</option>
+                {% endfor -%}
             </select>
+            {%- assign placed_category_picker = true -%}
             {% endif -%}
             <a href="{{ item.url }}"><img class="alignleft" src="{{ item.portfolio.cover.thumb }}"/></a>
             <a href="{{ item.url }}">{{ item.title }}</a>
             <p class="portfolio_index_date">{{ item.date | date: "%Y"  }}</p> 
         </div>
+    {%- endif -%}
 {% endfor %}
     </div>
 </div>
