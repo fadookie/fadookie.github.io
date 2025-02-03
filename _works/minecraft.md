@@ -11,7 +11,7 @@ author:
 author_login: eliot
 author_email: fadookie@gmail.com
 date: '2023-08-17 12:00:00 +0000'
-categories: []
+categories: ['Personal']
 tags: []
 comments: []
 portfolio:
