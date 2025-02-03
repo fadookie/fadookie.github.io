@@ -72,7 +72,6 @@ $portfolio_thumb_item_width: 150px;
 
 .portfolio_thumb_item {
     max-width: $portfolio_thumb_item_width;
-    display: none;
     position: relative;
 }
 
@@ -80,10 +79,6 @@ $portfolio_thumb_item_width: 150px;
     position: absolute;
     left: 0;
     top: -30px;
-}
-
-.portfolio_thumb_item.is_visible {
-	display: block;
 }
 
 .portfolio_index_date {

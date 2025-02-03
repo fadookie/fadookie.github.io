@@ -4,7 +4,9 @@ layout: default
 {%- assign categories = "Featured,All,Games,Hardware,Personal,Work,Mods,Visuals,Art" | split: "," -%}
 <script src="{{ site.baseurl }}{% link assets/js/main.js %}"></script>
 <div id="content">
+    {%- comment -%}
     Selected category: {{page.selected_category}}
+    {%- endcomment -%}
 {{ content }}
     <div class="portfolio_thumb_section">
 {%- assign placed_category_picker = false -%}
@@ -16,7 +18,7 @@ layout: default
         {%- assign show_item = true -%}
     {%- endif -%}
     {%- if show_item -%}
-        <div class="portfolio_thumb_item is_visible">
+        <div class="portfolio_thumb_item">
             {%- if placed_category_picker == false %}
             <select id="category_picker" onchange = "selectCategory(event)">
                 {%- for category in categories %}
