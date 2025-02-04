@@ -32,6 +32,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-300x200.jpg
     large: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-1024x682.jpg
+    cover_alt: >-
+      Photo of me playing with Slime Girls at DNA Lounge. Game Visualizer #1 is projected behind the band showing a pseudo-3D road, car, and spectrum analyzer.
   media:
     - type: youtube
       value: iC0E2q2P63Q
@@ -50,6 +52,8 @@ portfolio:
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1709894844-o368070507-6-300x200.jpg
       large: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1709894844-o368070507-6-1024x682.jpg
+      alt: >-
+        Photo of Slime Girls on stage with Game Visualizer #1 projected behind them.
     - type: image
       value: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1434326020-6.jpg
@@ -59,6 +63,8 @@ portfolio:
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1434326020-6-300x200.jpg
       large: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1434326020-6-1024x682.jpg
+      alt: >-
+        Photo of Slime Girls on stage with Game Visualizer #1 projected behind them, at Rockage festival.
 ---
 <p>I make playable, interactive visualizers that synchronize with live music. This is one of my current ongoing side projects.</p>
 <p>My custom software can fire off events in the game in time with the tempo of the song, as well as performing spectrum analysis on the incoming audio. It is set up with keybinds so I can control it during a performance.</p>

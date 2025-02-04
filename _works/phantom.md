@@ -31,6 +31,8 @@ portfolio:
       /assets/phantom_white_player.png
     medium: >-
       /assets/phantom_white_player.png
+    cover_alt: >-
+      Screenshot of "Phantom" showing player character (a white blob with stubby arms and legs and red eyes and mouth) being pursued by a bunch of white blob characters, and pursuing some black blob characters. Some white and black walls form a sort of scattered maze. A red circular wedge shows the countdown timer in the bottom left corner. "Score: 1" is shown in the upper left corner.
   media:
     - type: image
       value: >-
@@ -39,6 +41,8 @@ portfolio:
         /assets/phantom_menu.png 
       medium: >-
         /assets/phantom_menu.png 
+      alt: >-
+        Main menu for "Phantom" showing black and white blob characters and "Start", "Instructions", "Options", "Credits", and "Quit" buttons.
     - type: image
       value: >-
         /assets/phantom_black_player.png
@@ -46,6 +50,8 @@ portfolio:
         /assets/phantom_black_player.png
       medium: >-
         /assets/phantom_black_player.png
+      alt: >-
+        Another screenshot of "Phantom" but this time the player is a black blob with red eyes and mouth.
 ---
 
 You must touch and possess your enemies of the opposite color before your time runs out! When enemies of the same color hit you, it takes some of your time away. When you take over a new body, your prey become your predators and vice versa, and you get more time. You (and enemies) can phase through walls that match your color. See how long you can survive!

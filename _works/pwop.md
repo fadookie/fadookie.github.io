@@ -32,6 +32,8 @@ portfolio:
       /assets/PWOP-thumb-large.jpg
     medium: >-
       /assets/PWOP-thumb-large.jpg
+    cover_alt: >-
+      A laptop running PWOP has the keyboard covered with a hand-drawn PWOP sign. It's connected to a phone-sized box with 18 translucent plastic bubbles on top reminiscent of bubble wrap.
   media:
     - type: image
       value: >-
@@ -40,6 +42,8 @@ portfolio:
         /assets/PWOP-controller.jpg
       medium: >-
         /assets/PWOP-controller.jpg
+      alt: >-
+        Hands holding a phone-sized box with 18 translucent plastic bubbles on top, reminiscent of bubble wrap.
     - type: image
       value: >-
         /assets/PWOP-demo.png
@@ -47,6 +51,8 @@ portfolio:
         /assets/PWOP-demo-thumb-150.png
       medium: >-
         /assets/PWOP-demo.png
+      alt: >-
+        A laptop running PWOP has the keyboard covered with a hand-drawn PWOP sign. It's connected to a phone-sized box with 18 translucent plastic bubbles on top reminiscent of bubble wrap.
     - type: image
       value: >-
         /assets/PWOP-screenshot.jpg
@@ -54,6 +60,8 @@ portfolio:
         /assets/PWOP-screenshot.jpg
       medium: >-
         /assets/PWOP-screenshot.jpg
+      alt: >-
+        Screenshot of PWOP showing two disembodied, low-poly cyan hands trying to grasp some white bubbles on top of a magenta rectangle.
     - type: youtube
       value: YS71YFUpZdU
 ---

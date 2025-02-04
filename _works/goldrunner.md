@@ -25,6 +25,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/goldrunner_screenshot-150x150.jpg
     medium: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/goldrunner_screenshot-300x240.jpg
+    cover_alt: >-
+      Screenshot of Klik N' Play showing my game GOLDRUNNER, a spider-y cave with a bunch of platforms supported by arches with a few ruby-esque gems scattered around.
   media: []
   download: 'http://www.glorioustrainwrecks.com/node/1716'
   event: >-

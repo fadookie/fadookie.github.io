@@ -4,7 +4,7 @@ layout: default
 <h1>{{ page.title }}</h1> 
 <div class="entry-content">
     <a href="{{ page.portfolio.cover.value }}">
-        <img class="alignleft header-image" src="{{ page.portfolio.cover.medium }}">
+        <img class="alignleft header-image" src="{{ page.portfolio.cover.medium }}"{%- if page.portfolio.cover.cover_alt %} alt="{{ page.portfolio.cover.cover_alt | escape }}"{%- endif -%}>
     </a>
     {{ content }}
     {% if page.portfolio.play %}
@@ -42,9 +42,9 @@ layout: default
         {% if media.type == "image" %}
         <a href="{{ media.value }}">
             {% if media.thumb %}
-            <img class="gallery_thumb" width="150" height="150" src="{{ media.thumb }}">
+            <img class="gallery_thumb" width="150" height="150" src="{{ media.thumb }}"{%- if media.alt %} alt="{{ media.alt | escape }}"{%- endif -%}>
             {% else %}
-            <img class="gallery_thumb" width="150" height="150" src="{{ media.value | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}">
+            <img class="gallery_thumb" width="150" height="150" src="{{ media.value | replace: ".png", "-150x150.png" |  replace: ".jpg", "-150x150.jpg" | replace: ".jpeg", "-150x150.jpg"  }}"{%- if media.alt %} alt="{{ media.alt | escape }}"{%- endif -%}>
             {% endif %}
         </a>
         {% endif %}

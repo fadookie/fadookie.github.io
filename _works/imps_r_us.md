@@ -33,6 +33,8 @@ portfolio:
       /assets/imps_r_us.png
     large: >-
       /assets/imps_r_us.png
+    cover_alt: >-
+      Screenshot of Imps 'R Us, showing the player as an imp, its brown hand at the bottom of the screen launching a fireball at Doomguy in E1M1.
   media:
     - type: youtube
       value: B_CPfhE6HGQ

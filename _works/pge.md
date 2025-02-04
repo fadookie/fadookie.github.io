@@ -25,6 +25,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/ledproperties2-150x150.png
     medium: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/ledproperties2-300x245.png
+    cover_alt: >-
+      Screenshot of "Led" level editor tool for the Panther Game Engine. It shows a level from our Microsoft Imagine Cup game with an alien character on a blue and gray landscape. Visible are various toolbars and menus, scene hierarchy, and object properties editor.
   media: []
   download: 'http://pantherengine.sourceforge.net/'
   time: 1 year

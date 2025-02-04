@@ -25,6 +25,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/oddsmos_screen-150x150.png
     medium: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/oddsmos_screen-300x225.png
+    cover_alt: >-
+      Screenshot of "Oddsmos" showing a bunch of white circles of varying sizes and one green circle on a black background.
   media: []
   download: 'http://eliot.s3.amazonaws.com/releases/games/Oddsmos_v1.zip'
   event: '<a href="https://web.archive.org/web/20111030210745/https://0hgame.eu/">0 Hour Game Jam</a'

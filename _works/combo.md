@@ -34,6 +34,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/combo-main-300x169.png
     large: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/combo-main-1024x576.png
+    cover_alt: >-
+      A screenshot of Combo showing the screen split into four quadrants. Top left: a 2D game showing a victorian woman with a sword in a forest area, "Score: 0" is in the upper left. Top right: a 3D western environment with a "Sherrif" building in the background and a man in a cowboy hat in the forground. A nuclear bomb is dropping to the right of him. Bottom left: A robot jumping between rooftops at night. Bottom right: The progress display screen showing a green energy beam shooting against a red energy beam.
   media: []
 ---
 <p>Combo is a game in which three players work together to achieve a common goal. It takes the form of three simultaneous minigames. The players must communicate in order to score combos across all three games to win. And also, sometimes the controls swap. :)</p>

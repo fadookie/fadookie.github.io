@@ -28,6 +28,8 @@ portfolio:
       /assets/semicake_medium.png
     large: >-
       /assets/semicake.png
+    cover_alt: >-
+      Screenshot of classic Doom showing Doomguy holding a pink cupcake. In front of him is a Cacodemon wearing a party hat, blowing a noisemaker toy. There is a large pink cake on a pedestal behind the Cacodemon.
   media:
     - type: youtube
       value: kRCE3UsuUyw
@@ -38,6 +40,8 @@ portfolio:
         /assets/conway-demo.gif 
       medium: >-
         /assets/conway-demo.gif 
+      alt: >-
+        Animated GIF showing my implementation of Conway's game of life celluar automata simulation inside GZDoom. There is a grid of candles on the ground. A special gun with a switch on it starts and stops the simulation. Firing weapons toggles cells between alive or dead. An alive cell has an imp in it, a dead cell has nothing or an imp corpse.
     - type: image
       value: >-
         /assets/nukage.gif
@@ -45,6 +49,8 @@ portfolio:
         /assets/nukage.gif
       medium: >-
         /assets/nukage.gif
+      alt: >-
+        Animated GIF showing my nukage shader for GZDoom, a liquidy warping effect of the screen using Simplex (Perlin) noise with a green tint.
 ---
 <p><b>Semiautobiographical Cakeitechture:</b> A virtual birthday card I made as part of the <a href="https://www.doomworld.com/idgames/levels/doom2/Ports/v-z/wadwed1">WAD Wednesday 1 Year Anniversary Mapset</a>.</p>
 <p><a href="https://github.com/fadookie/ggj2018/tree/conway">Dr. Conway's Infernal Machine:</a> (Unreleased) An implementation of the game of life in ZScript, with BFGs.</p>

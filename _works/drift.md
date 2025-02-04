@@ -27,6 +27,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/Screen-shot-2011-12-18-at-6.26.53-PM1-300x225.png
     large: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/Screen-shot-2011-12-18-at-6.26.53-PM1-1024x768.png
+    cover_alt: >-
+      Screenshot of "Drift" showing a 2D level with a sort of simple maze with various obstacles and an orange robot. A white line pointing away from the robot shows the trajectory of its next jump.
   media:
     - type: text
       value: Text paragraph test

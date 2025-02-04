@@ -31,6 +31,10 @@ portfolio:
       /assets/slay-the-shire-heckler-battle.png
     medium: >-
       /assets/slay-the-shire-heckler-battle.png
+    thumb_alt: >-
+      Main menu for "Slay The Shire" showing logo in stylized typography and "Start" button.
+    cover_alt: >-
+      Screenshot of "Slay The Shire" showing pixel art of a court jester with a bullhorn shouting at a king (the heckler) sitting in a throne in a crowd of people. A deck of cards is shown with punchline and comeback cards. Health bars are shown for the heckler and jester and an energy indicator showing 0/5 and a deck with "5". there's also a flag-shaped "End Turn" button.
 ---
 
 Roguelike Deckbuilding game where you play a comic that must use a deck of different comedy cards to defeat hecklers, creating a mad lib-style comedy set to make the crowd laugh.

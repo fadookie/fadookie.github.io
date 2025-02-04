@@ -31,6 +31,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/screenshot00-150x150.png
     medium: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/screenshot00-300x225.png
+    cover_alt: >-
+      Screenshot of AnimatedGraf program showing a shape with a blue background with dark blue lines interconnecting a mesh of points, overlaid with a white structure showing the voronoi diagram of those points. A triangular rainbow pattern connects the sides of the shape to points on the left and right edges of the screen.
   media: []
 ---
 <p>I saw <a href="http://www.paloaltopublicart.org/Collection/Col26/01.html">this really cool mural</a> in Palo Alto, and it reminded me of a Voronoi diagram. This led me to thinking that it would be cool to model the mural itself in code so it could be made interactive and rendered in real-time. This is the result.</p>

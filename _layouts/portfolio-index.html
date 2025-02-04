@@ -37,7 +37,13 @@ layout: default
             </select>
             {%- assign placed_category_picker = true -%}
             {% endif -%}
-            <a href="{{ item.url }}"><img class="alignleft" src="{{ item.portfolio.cover.thumb }}"/></a>
+            {%- assign cover_alt = false -%}
+            {%- if item.portfolio.cover.thumb_alt -%}
+                {%- assign cover_alt = item.portfolio.cover.thumb_alt -%}
+            {%- elsif item.portfolio.cover.cover_alt -%}
+                {%- assign cover_alt = item.portfolio.cover.cover_alt -%}
+            {%- endif -%}
+            <a href="{{ item.url }}"><img class="alignleft" src="{{ item.portfolio.cover.thumb }}"{%- if cover_alt %} alt="{{ cover_alt | escape }}"{%- endif -%}/></a>
             <a href="{{ item.url }}">{{ item.title }}</a>
             <p class="portfolio_index_date">{{ item.date | date: "%Y"  }}</p> 
         </div>

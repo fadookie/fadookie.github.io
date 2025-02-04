@@ -11,7 +11,7 @@ author:
 author_login: eliot
 author_email: fadookie@gmail.com
 date: '2016-03-28 12:00:00 +0000'
-categories: ['Games', 'Work']
+categories: ['Games', 'Work', 'Featured']
 tags: []
 comments: []
 portfolio:
@@ -26,6 +26,10 @@ portfolio:
       /assets/epicskater_icon.png
     medium: >-
       /assets/epicskater_1_med.jpg
+    thumb_alt: >-
+      App icon for "Epic Skater" showing a skater guy with a black outfit and hat doing a kickflip on his skateboard over a yellow background.
+    cover_alt: >-
+      Screenshot of "Epic Skater" showing a skater guy in a red outfit, jeans, and a red hat doing an ollie. Behind him is a street intersection with a sign reading "Santa Monica Blvd." and a brick building.
   media:
     - type: youtube
       value: ypsqVsgpSyI

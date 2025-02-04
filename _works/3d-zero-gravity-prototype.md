@@ -31,6 +31,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/ScreenShot00011-300x225.png
     large: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/ScreenShot00011-1024x768.png
+    cover_alt: >-
+      A mostly empty boxy room with the default UDK blue-and-grey checkerboard texture. Inside are a couple of floating crates.
   media:
     - type: youtube
       value: D-UT8Vfok1E

@@ -29,6 +29,8 @@ portfolio:
       /assets/minecraft-urithiru.png
     large: >-
       /assets/minecraft-urithiru.png
+    cover_alt: >-
+      Screenshot of Minecraft showing the tower of Urithiru, a majestic multi-level tower with soaring buttresses, at sunset.
   media:
     - type: image
       value: >-
@@ -37,6 +39,8 @@ portfolio:
         /assets/minecraft-cryptic_crawl_trim.gif
       medium: >-
         /assets/minecraft-cryptic_crawl_trim.gif
+      alt: >-
+        Animated GIF of cryptic spren moving along the rocky ground in Minecraft, its strange symbols spinning.
 ---
 
 During COVID lockdown in the summer of 2020, I picked up a new game development hobby: Minecraft modding.
@@ -51,11 +55,11 @@ I embarked on a quest to make these tools, to varying degrees of completion and 
 
 **[Particleman](https://github.com/fadookie/particleman):** This is still a work in progress on the back burner, an attempt to extract the [Bedrock Edition particle system](https://bedrock.dev/docs/stable/Particles) runtime from [McHorse's Blockbuster mod](https://github.com/mchorse/blockbuster) as a standalone library. The objective was to allow Java Edition modders to be able to use the [Snowstorm editor](https://github.com/JannisX11/snowstorm) for authoring particle systems. My efforts to extract McHorse's [MoLang](https://bedrock.dev/docs/stable/Molang) interpreter as a standalone vanilla Java library was leveraged by GeckoLib.
 
-<img src="/assets/minecraft-skyeel-fly-tex.gif" width="473" height="281" alt="Skyeel model by AlahrranHonor, animated by me"/>
+<img src="/assets/minecraft-skyeel-fly-tex.gif" width="473" height="281" title="Skyeel model by AlahrranHonor, animated by me." alt="Animated GIF of Skyeel model by AlahrranHonor, animated by me. It's a green and blue eel-like creature with three pairs of flapping wings and a ridge of fins on top of its spine. Its mouth is snapping open and shut."/>
 
 I think overall my efforts to create tooling to support my main project were ultimately more successful than the project itself. It went through three iterations: first, as a mod for the [Fabric mod loader](https://fabricmc.net/). Then, as a vanilla-compatible server using server-side plugins such as [ModelEngine](https://mythiccraft.io/index.php?resources/model-engine%E2%80%94ultimate-entity-model-manager-1-19-4-1-20-4.1213) to add support for custom entities. Finally, when the StormCraft project shuttered due to a long bout of inactivity, I took some of the assets I had made and commissioned and contributed them to [Leaf's Cosmere Suite mod](https://github.com/leafreynolds/cosmere). More details and graphics from the mod can be found on the [17th Shard StormCraft forum thread](https://www.17thshard.com/forums/topic/96185-stormcraft-a-minecraft-modserver/).
 
-<video class="responsive_video" controls>
+<video class="responsive_video" controls alt="Video of Minecraft showing rockbuds closing up when the rain starts and opening up again when the rain stops. The rockbud model is by AlahrranHonor.">
   <!-- <source src="/assets/minecraft-rockbuds.mp4" type="video/mp4"> -->
   <source src="http://eliot.s3.amazonaws.com/eliotlash.com/minecraft-rockbuds.mp4" type="video/mp4">
   Your browser does not support the video tag.

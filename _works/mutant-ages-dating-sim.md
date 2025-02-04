@@ -29,6 +29,10 @@ portfolio:
       /assets/mutant-ages-1_main.png
     large: >-
       /assets/mutant-ages-1_main.png
+    thumb_alt: >-
+      Wolverine sprite over a drawing of the front of the X-Mansion.
+    cover_alt: >-
+      Wolverine sprite over a drawing of the front of the X-Mansion. A dialogue box at the bottom of the screen says "Logan: Hey, bub. What are you doing outside class? Where's your hall pass?"
   media:
     - type: youtube
       value: DceCykxJRo8
