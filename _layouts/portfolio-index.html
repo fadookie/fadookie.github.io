@@ -30,7 +30,7 @@ layout: default
     {%- if show_item -%}
         <div class="portfolio_thumb_item">
             {%- if placed_category_picker == false %}
-            <select id="category_picker" class="invisible" onchange="selectCategory(event)">
+            <select id="category_picker" class="invisible" onchange="selectCategory(event)" aria-label="Portfolio category filter">
                 {%- for category in categories %}
                 <option value="{{category_links[forloop.index0]}}"{%- if category == page.selected_category %} selected{%- endif -%}>{{ category }}</option>
                 {% endfor -%}
