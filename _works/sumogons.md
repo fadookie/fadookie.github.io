@@ -27,6 +27,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/sumogons-e1339319781173-150x150.png
     medium: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/sumogons-300x225.png
+    cover_alt: >-
+      Screenshot of "Sumogons!" showing a red squished pentagon, a purple diamond-shaped "peg", and a blue narrow triangle over a gray background.
   media: []
   event: '<a href="http://www.piratekart.com/">2012 GDC Pirate Kart</a>'
   time: ~4 Days

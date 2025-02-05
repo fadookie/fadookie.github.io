@@ -32,6 +32,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180332564-6-300x200.jpg
     large: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180332564-6-1024x682.jpg
+    cover_alt: >-
+      Photo of the Triggerboy in Matt Payne's VJing setup, shown in a case with various banana plug ports on top. It's wired to an NES that also has a bunch of banana plug ports that have been modded into the case. I think it might also be connected to a Sega Genesis too? 
   media:
     - type: youtube
       value: cIA4SQTXw4s
@@ -44,9 +46,13 @@ portfolio:
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180335064-6-300x200.jpg
       large: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180335064-6-1024x682.jpg
+      alt: >-
+        Photo of Matt Payne projecting circuit-bent 8-bit visuals on top of himself as he plays the drums, the glitches are being triggered automatically in time with the music by the Triggerboy.
     - type: image
       value: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/triggerboy_devboard1.jpg
+      alt: >-
+        Photo of my Triggerboy development workbench, showing a Game Boy Advance running the LSDJ sequencer connected to an Arduino development board. The Game Boy link cable and audio line out are both wired to a bread board shield on the Arduino.
       thumb: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/triggerboy_devboard1-150x150.jpg
       medium: >-
@@ -62,6 +68,8 @@ portfolio:
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1174895126-6-300x200.jpg
       large: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1174895126-6-1024x682.jpg
+      alt: >-
+        Photo of Matt Payne projecting circuit-bent 8-bit visuals over Slime Girls during a live performance. Some of The glitches are being triggered automatically in time with the music by the Triggerboy.
 ---
 <p>Triggerboy is an open-hardware electronic synchronization tool to assist in the creation of live music visuals. It is an application for the&nbsp;<a href="http://arduino.cc/">Arduino hardware platform</a>&nbsp;that is intended to interface with the&nbsp;<a href="http://littlesounddj.com/">LittleSoundDJ</a>&nbsp;sequencer for Game Boy handheld systems. It syncs tempo/clock from the Game Boy and can run on-board audio analysis and FFT spectrum analysis. It uses this information to trigger the digital out pins on the Arduino in time with the music.</p>
 <p>So far, Triggerboy has been employed during live performances by <a href="http://theglowingstarsband.wordpress.com/">The Glowing Stars</a>,&nbsp;<a href="http://matthewjosephpayne.wordpress.com/">Matthew Joseph Payne</a> and <a href="http://slimegirls.bandcamp.com/">Slime Girls</a> to trigger circuit-bending of NES and Genesis consoles to create glitchy, 8-bit visuals. It has become a regular component in Matthew Joseph Payne's rig for live visual performance. I collaborated with Matt in the design of the unit and the development of the hardware, and wrote all of the software.</p>

@@ -13,9 +13,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <title>YouTube logo</title>
-  <desc>YouTube logo showing a play button inside a TV-shaped rounded rectangle.</desc>
+   xmlns:svg="http://www.w3.org/2000/svg"
+   role="img"
+   aria-labelledby="icon-youtube-desc"
+   >
+  <desc id="icon-youtube-desc">YouTube logo showing a play button inside a TV-shaped rounded rectangle.</desc>
   <defs
      id="defs1" />
   <sodipodi:namedview

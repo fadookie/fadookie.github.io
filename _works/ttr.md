@@ -28,6 +28,8 @@ portfolio:
       /assets/ttr_tour_medium.jpg
     large: >-
       /assets/ttr_tour.jpg
+    cover_alt: >-
+      Screenshot of "Tap Tap Revenge Tour" showing three tracks with tap targets falling down towards pads at the bottom of the screen. A "slicer" is being sliced with a swipe on the left side. The HUD shows a combo of 8x with a 57-tap streak, 99% accuracy, and 756,810 points.
   media:
     # Videos are down
     # - type: youtube
@@ -43,15 +45,8 @@ portfolio:
         /assets/ttr4_big.jpeg
       medium: >-
         /assets/ttr4_big.jpeg
-    - type: image
-      value: >-
-        /assets/ttr_tour.jpg
-      thumb: >-
-        /assets/ttr_tour_thumb.jpg
-      medium: >-
-        /assets/ttr_tour.jpg
-      large: >-
-        /assets/ttr_tour.jpg
+      alt: >-
+        Screenshot of "Tap Tap Revenge 4" looking somewhat similar to the "Tap Tap Revenge Tour" one but each track has a unique color (red, green, and blue) and the red and blue ones cross over in the distance. A tap accuracy meter is shown in the upper right and a multipler meter in the upper left. A 16x multiplier powerup is shown to the left having just being used, and a "16x for 10 sec" toast is shown in the center of the screen.
 ---
 
 My first job out of college was working for Tapulous, Inc. as a content/community manager. Days after I joined, the studio was acquired by Disney. I started off integrating music tracks into the game, managing marketing campaigns, and doing user support. I quickly tried to find ways to put my coding skills to work, automating a lot of the digital asset management work and starting to make improvements to our admin panel webapp.

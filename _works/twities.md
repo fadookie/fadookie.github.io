@@ -30,8 +30,10 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM-150x150.png
     medium: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM-300x300.png
+    cover_alt: >-
+      Screenshot of "Twities" showing a cityscape made of Twitter accounts. The avatar for each account is shown on the top of their building and tiled as "windows" on the sides. Very large skyscrapers are shown in the center surrounded by a ring of much shorter buildings and then a bunch of nearly flat ones, connected by small roads, green grass, and a blue sky (ha ha.)
   media: []
 ---
 <p>Visualizes the people you follow on Twitter as a 3D cityscape. The size of the building for that person corresponds to how many followers they have.</p>
-<p>I was inspired to program this based on <a href="https://twitter.com/eliot_l/status/214213367336927232">some tweets</a>&nbsp;from my friend <a href="http://aliendovecote.com/">Porpentine</a>. She provided creative input throughout development and made pixel art for the ground.</p>
-<p>Just a little polish remains until I'd be comfortable releasing it. The source code has been public since day one, feel free to play with it if you can get it to compile under the latest Processing! (I was using some weird nightly to make this and I had to hack in some of the GL texture parameter stuff.)</p>
+<p>I was inspired to program this based on <a href="https://twitter.com/eliot_l/status/214213367336927232">some tweets</a>&nbsp;from <a href="https://xrafstar.monster">Porpentine</a> (Link may be NSFW.) They provided creative input throughout development and made pixel art for the ground.</p>
+<p>I never made an official release of this, although the source code has been public since day one. Feel free to play with it if you can get it to compile under the latest Processing! (I was using some weird nightly to make this and I had to hack in some of the GL texture parameter stuff.) Although I think you'd have to pay for Twitter API access these days and I can't recommend that.</p>

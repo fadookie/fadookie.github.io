@@ -25,6 +25,8 @@ portfolio:
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/screenshot10-150x150.png
     medium: >-
       https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/screenshot10-300x225.png
+    cover_alt: >-
+      Screenshot of "Unforbidden Planetoid" showing a rocketeer-esque spaceman character in a red and yellow outfit running through a maze inside a small blue and purple planet. The ground is curved, a series of platforms in concentric rings. A starfield is partially visible through gaps in the walls.
   media:
     - type: image
       value: >-
@@ -33,6 +35,8 @@ portfolio:
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/LoadScreen-e1339315620289-150x150.png
       medium: >-
         https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/LoadScreen-300x225.png
+      alt: >-
+        Splash screen of "Unforbidden Planetoid" showing a retro-style red rocket landed on the exterior of a small planetoid. A starfield is shown in the background and a ramp extends from the rocket to the ground. The game's name is in the upper left corner. On the bottom right it says "Loading...". Credits are shown in the bottom left: "Eliot L: Program. Daniel A.: Art. Chris L: Music."
   download: 'https://eliot.s3.amazonaws.com/releases/games/ld48/ld23/application.windows32.zip'
   event: '<a href="https://web.archive.org/web/20120802043034/http://www.ludumdare.com/compo/ludum-dare-23/">Ludum Dare 23</a>'
   time: 72 Hours
