@@ -24,7 +24,7 @@ tags:
 - tool tips
 comments: []
 ---
-<p><strong><img class="alignright" title="PVC Tee" src="http://eliot.s3.amazonaws.com/eliotlash.com/tee.jpg" alt="A physical tee for pipes made from PVC" width="275" height="229" /></strong></p>
+<p><strong><img class="alignright" title="PVC Tee" src="https://fly.storage.tigris.dev/eliot/eliotlash.com/tee.jpg" alt="A physical tee for pipes made from PVC" width="275" height="229" /></strong></p>
 <p><strong>Tee</strong> is a wonderful but often-overlooked core utility. It's purpose is to intercept a pipeline, write the output to a file, and pass the output along the pipe. It can be used to easily add output logging to any command pipeline or script.</p>
 <p>To get the most out of <strong>tee</strong>, it pays to read up on how input, output, and errors are handled by the shell. (As a byproduct, a good understanding of bash I/O redirection will make you a more efficient bash user and scripter!)</p>
 <p>There are three <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> that can be used by any unix program: stdin, stdout, and stderr. Each of these can be thought of as a file. By default, all unix programs read from stdin, write normal output to stdout, and write error messages to stderr. &nbsp;The shell's job is to take things being read or written to one of the standard streams and redirect them through pipes that you specify. By default, the shell will take the characters you type into the terminal while a program is running and pass them to that program's stdin. It will take the characters written by the program to stderr and stdout and print them to your terminal.</p>

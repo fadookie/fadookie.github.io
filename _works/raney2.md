@@ -28,13 +28,13 @@ portfolio:
   technologies: 'Unity, ShaderLab, Cg'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/raney2thumb.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/raney2thumb.png
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/raney2thumb-150x150.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/raney2thumb-150x150.png
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/raney2thumb-300x169.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/raney2thumb-300x169.png
     large: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/raney2thumb-1024x576.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/raney2thumb-1024x576.png
     cover_alt: >-
       Screenshot of "Raney2" shader demo showing a normal map texture being distorted by Simplex (Perlin) noise.
   media: []
@@ -43,4 +43,4 @@ portfolio:
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><a href="https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/perlin_distortion3.gif"><img class="alignnone size-full wp-image-882" src="https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/perlin_distortion3.gif" alt="Animated GIF of &quot;Raney2&quot; shader demo showing a normal map texture being distorted by Simplex (Perlin) noise, with a moving color distortion effect as a sort of negative light passes by it, darkening the colors and making the blues and pinks shift to greens and reds." width="281" height="281" /></a></p>
+<p><a href="https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/perlin_distortion3.gif"><img class="alignnone size-full wp-image-882" src="https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/perlin_distortion3.gif" alt="Animated GIF of &quot;Raney2&quot; shader demo showing a normal map texture being distorted by Simplex (Perlin) noise, with a moving color distortion effect as a sort of negative light passes by it, darkening the colors and making the blues and pinks shift to greens and reds." width="281" height="281" /></a></p>

@@ -19,11 +19,11 @@ tags: []
 comments: []
 portfolio:
   cover:
-    value: 'https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/shatter.png'
+    value: 'https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/shatter.png'
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/shatter-150x150.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/shatter-150x150.png
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/shatter-300x225.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/shatter-300x225.png
     cover_alt: >-
       Screenshot of "Shatter" showing a colorful voronoi diagram resembling stained glass.
   media: []

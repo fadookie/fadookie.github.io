@@ -25,13 +25,13 @@ portfolio:
     OSCuMote, VDMX, Quartz Composer
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6.jpg
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-150x150.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-150x150.jpg
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-300x200.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-300x200.jpg
     large: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-1024x682.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_slimegirls_p1505826054-6-1024x682.jpg
     cover_alt: >-
       Photo of me playing with Slime Girls at DNA Lounge. Game Visualizer #1 is projected behind the band showing a pseudo-3D road, car, and spectrum analyzer.
   media:
@@ -45,24 +45,24 @@ portfolio:
       value: fWrpq5B21WY
     - type: image
       value: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1709894844-o368070507-6.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1709894844-o368070507-6.jpg
       thumb: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1709894844-o368070507-6-150x150.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1709894844-o368070507-6-150x150.jpg
       medium: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1709894844-o368070507-6-300x200.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1709894844-o368070507-6-300x200.jpg
       large: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1709894844-o368070507-6-1024x682.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1709894844-o368070507-6-1024x682.jpg
       alt: >-
         Photo of Slime Girls on stage with Game Visualizer #1 projected behind them.
     - type: image
       value: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1434326020-6.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1434326020-6.jpg
       thumb: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1434326020-6-e1362272994619-150x150.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1434326020-6-e1362272994619-150x150.jpg
       medium: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1434326020-6-300x200.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1434326020-6-300x200.jpg
       large: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1434326020-6-1024x682.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1434326020-6-1024x682.jpg
       alt: >-
         Photo of Slime Girls on stage with Game Visualizer #1 projected behind them, at Rockage festival.
 ---

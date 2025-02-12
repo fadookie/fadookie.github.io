@@ -22,11 +22,11 @@ portfolio:
   website: '<a href="https://github.com/fadookie/Sumogons">GitHub</a>'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/sumogons.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/sumogons.png
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/sumogons-e1339319781173-150x150.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/sumogons-e1339319781173-150x150.png
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/sumogons-300x225.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/sumogons-300x225.png
     cover_alt: >-
       Screenshot of "Sumogons!" showing a red squished pentagon, a purple diamond-shaped "peg", and a blue narrow triangle over a gray background.
   media: []

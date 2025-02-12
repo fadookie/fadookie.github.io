@@ -20,11 +20,11 @@ comments: []
 portfolio:
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_band2.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_band2.jpg
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_band2-150x150.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_band2-150x150.jpg
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_band2-300x200.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_band2-300x200.jpg
     cover_alt: >-
       Photo of Matthew Joseph Payne with full band outdoors. I'm projecting video onto the band and a large screen behind them.
   media:
@@ -33,20 +33,20 @@ portfolio:
     #   value: j02BX8yDiHk
     - type: image
       value: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_band4.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_band4.jpg
       thumb: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_band4-150x150.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_band4-150x150.jpg
       medium: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_band4-300x200.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_band4-300x200.jpg
       alt: >-
         Photo of Matthew Joseph Payne with full band, from a different angle. I'm projecting video onto the band and a large screen behind them.
     - type: image
       value: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_vj1.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_vj1.jpg
       thumb: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_vj1-150x150.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_vj1-150x150.jpg
       medium: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/eliot_mjp27042013_vj1-300x200.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/eliot_mjp27042013_vj1-300x200.jpg
       alt: >-
         Photo of me doing live visuals at the Matthew Joseph Payne show. I have a laptop and a control surface with many colored light-up buttons, and a projector.
 ---

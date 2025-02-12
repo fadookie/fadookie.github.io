@@ -21,11 +21,11 @@ portfolio:
   play: 'http://www.glorioustrainwrecks.com/node/1855'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/assage_screen.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/assage_screen.png
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/assage_screen-e1339318826947-150x122.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/assage_screen-e1339318826947-150x122.png
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/assage_screen-300x64.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/assage_screen-300x64.png
     thumb_alt: >-
       Screenshot of Passage-esque game showing the pixel art Passage guy traversing a horizontal corrdidor. There are a few chests littered around the passage. The open ones have text above them that says "Rai$e!"
     cover_alt: >-

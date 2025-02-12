@@ -21,11 +21,11 @@ portfolio:
   download: 'http://itunes.apple.com/us/app/the-maestro/id516493348'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/maestro_sm.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/maestro_sm.jpg
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/maestro_sm-150x150.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/maestro_sm-150x150.jpg
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/maestro_sm-300x225.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/maestro_sm-300x225.jpg
     cover_alt: >-
       Pixel art of a blue violn player with an open violin case on the ground and a couple of yellow people standing in front of the Colosseum. Their sparkly tears are flying through the air. A HUD at the bottom shows "Time: 91" and "Tears: 00/10".
   media:

@@ -25,11 +25,11 @@ portfolio:
   technologies: 'Processing, OpenGL, Twitter API via twitter4j'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM.png
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM-150x150.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM-150x150.png
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM-300x300.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/Screen-Shot-2013-03-03-at-4.22.48-AM-300x300.png
     cover_alt: >-
       Screenshot of "Twities" showing a cityscape made of Twitter accounts. The avatar for each account is shown on the top of their building and tiled as "windows" on the sides. Very large skyscrapers are shown in the center surrounded by a ring of much shorter buildings and then a bunch of nearly flat ones, connected by small roads, green grass, and a blue sky (ha ha.)
   media: []

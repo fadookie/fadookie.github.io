@@ -19,18 +19,18 @@ tags: []
 comments: []
 portfolio:
   download: >-
-    http://eliot.s3.amazonaws.com/releases/art/AnimatedGraf/AnimatedGraf_20120512_67f0129.zip
+    https://fly.storage.tigris.dev/eliot/releases/art/AnimatedGraf/AnimatedGraf_20120512_67f0129.zip
   website: '<a href="https://github.com/fadookie/AnimatedGraf">GitHub</a>'
   time: Free time over 2 days
   role: Programmer
   technologies: 'Processing, Mesh library'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/screenshot00.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/screenshot00.png
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/screenshot00-150x150.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/screenshot00-150x150.png
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/screenshot00-300x225.png
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/screenshot00-300x225.png
     cover_alt: >-
       Screenshot of AnimatedGraf program showing a shape with a blue background with dark blue lines interconnecting a mesh of points, overlaid with a white structure showing the voronoi diagram of those points. A triangular rainbow pattern connects the sides of the shape to points on the left and right edges of the screen.
   media: []

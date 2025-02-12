@@ -26,11 +26,11 @@ portfolio:
   technologies: 'Arduino, C, Processing, Flash, ActionScript 3'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/16177_902652939469_323006519_n.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/16177_902652939469_323006519_n.jpg
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/16177_902652939469_323006519_n-150x150.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/16177_902652939469_323006519_n-150x150.jpg
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/16177_902652939469_323006519_n-300x225.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/16177_902652939469_323006519_n-300x225.jpg
     cover_alt: >-
       A group of people are gathered around a circle of light projected onto the floor, with a smaller circle in the center and four around the edges in a compass rose formation. Accelerometer sensors are connected to the four players. I am leaping into the air.
   media:

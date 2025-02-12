@@ -25,13 +25,13 @@ portfolio:
   technologies: 'Arduino, C'
   cover:
     value: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180332564-6.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180332564-6.jpg
     thumb: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180332564-6-150x150.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180332564-6-150x150.jpg
     medium: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180332564-6-300x200.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180332564-6-300x200.jpg
     large: >-
-      https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180332564-6-1024x682.jpg
+      https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180332564-6-1024x682.jpg
     cover_alt: >-
       Photo of the Triggerboy in Matt Payne's VJing setup, shown in a case with various banana plug ports on top. It's wired to an NES that also has a bunch of banana plug ports that have been modded into the case. I think it might also be connected to a Sega Genesis too? 
   media:
@@ -39,35 +39,35 @@ portfolio:
       value: cIA4SQTXw4s
     - type: image
       value: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180335064-6.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180335064-6.jpg
       thumb: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180335064-6-150x150.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180335064-6-150x150.jpg
       medium: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180335064-6-300x200.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180335064-6-300x200.jpg
       large: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1180335064-6-1024x682.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1180335064-6-1024x682.jpg
       alt: >-
         Photo of Matt Payne projecting circuit-bent 8-bit visuals on top of himself as he plays the drums, the glitches are being triggered automatically in time with the music by the Triggerboy.
     - type: image
       value: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/triggerboy_devboard1.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/triggerboy_devboard1.jpg
       alt: >-
         Photo of my Triggerboy development workbench, showing a Game Boy Advance running the LSDJ sequencer connected to an Arduino development board. The Game Boy link cable and audio line out are both wired to a bread board shield on the Arduino.
       thumb: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/triggerboy_devboard1-150x150.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/triggerboy_devboard1-150x150.jpg
       medium: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/triggerboy_devboard1-300x224.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/triggerboy_devboard1-300x224.jpg
       large: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/triggerboy_devboard1-1024x767.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/triggerboy_devboard1-1024x767.jpg
     - type: image
       value: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1174895126-6.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1174895126-6.jpg
       thumb: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1174895126-6-150x150.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1174895126-6-150x150.jpg
       medium: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1174895126-6-300x200.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1174895126-6-300x200.jpg
       large: >-
-        https://eliotlash.s3.amazonaws.com/mainsite/wp-content/uploads/p1174895126-6-1024x682.jpg
+        https://fly.storage.tigris.dev/eliotlash/mainsite/wp-content/uploads/p1174895126-6-1024x682.jpg
       alt: >-
         Photo of Matt Payne projecting circuit-bent 8-bit visuals over Slime Girls during a live performance. Some of The glitches are being triggered automatically in time with the music by the Triggerboy.
 ---

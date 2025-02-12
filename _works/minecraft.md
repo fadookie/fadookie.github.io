@@ -61,6 +61,6 @@ I think overall my efforts to create tooling to support my main project were ult
 
 <video class="responsive_video" controls alt="Video of Minecraft showing rockbuds closing up when the rain starts and opening up again when the rain stops. The rockbud model is by AlahrranHonor.">
   <!-- <source src="/assets/minecraft-rockbuds.mp4" type="video/mp4"> -->
-  <source src="http://eliot.s3.amazonaws.com/eliotlash.com/minecraft-rockbuds.mp4" type="video/mp4">
+  <source src="https://fly.storage.tigris.dev/eliot/eliotlash.com/minecraft-rockbuds.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
