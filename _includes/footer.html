@@ -22,7 +22,7 @@
         <ul class="social-media-list" aria-label="Social Links">
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}"><span class="icon icon--github">{% include icon-github.svg %}</span><span class="username">{{ site.github_username }}</span></a>
           </li>
           {% endif %}
 
